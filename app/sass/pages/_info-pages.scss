@@ -1,0 +1,43 @@
+/*!
+=====================================================
+                =   Info Pages    =
+=====================================================
+*/
+
+.info-pages {
+  margin: 35px 0 60px;
+  .page-text {
+    color: $black;
+    line-height: 20px;
+    word-break: break-word;
+    padding: 30px 30px 60px;
+    background-color: $white;
+    border-radius: $border-radius-5;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.12);
+    h1 {
+      margin-bottom: 15px;
+      text-align: center;
+      font-size: 40px;
+      line-height: 46px;
+      font-weight: normal;
+      font-family: $default-font-bold;
+    }
+    p {
+      margin-bottom: 1em;
+    }
+  }
+  .error-404 {
+    color: $black;
+    text-align: center;
+    font-family: $default-font-bold;
+    h1 {
+      font-size: 100px;
+      font-weight: bold;
+      margin: 0.75em 0;
+    }
+    p {
+      font-size: 32px;
+      margin-bottom: 1.5em;
+    }
+  }
+}

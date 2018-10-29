@@ -1,0 +1,61 @@
+@import 'vars';
+@import 'mixins';
+@import 'fonts';
+@import 'grid';
+
+//  Libs Helpers
+//
+//  Sticky Sidebar
+.sticky-sidebar-parent {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  align-content: flex-start;
+  @media only screen and (max-width: $breakpoint-lg) {
+    flex-direction: column;
+  }
+  .sticky-sidebar {
+    padding-right: 50px;
+    @media only screen and (max-width: $breakpoint-lg) {
+      order: 2;
+      margin: 0 auto !important;
+      padding-right: unset;
+      border-right: unset !important;
+    }
+    @media only screen and (max-width: $breakpoint-md) {
+      margin: 0;
+      width: 100%;
+    }
+  }
+}
+
+//  Rating Stars
+.rating-stars {
+  ul {
+    li.star {
+      display: inline-block;
+      & > i {
+        cursor: pointer;
+        font-family: 'Fontello';
+        font-style: normal;
+        font-size: 23px;
+        color: gold;
+        &::before {
+          content: '\e801';
+        }
+      }
+      &.hover > i {
+        color: gold;
+        &::before {
+          content: '\e800';
+        }
+      }
+      &.selected > i {
+        color: gold;
+        &::before {
+          content: '\e800';
+        }
+      }
+    }
+  }
+}

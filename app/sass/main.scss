@@ -1,0 +1,168 @@
+@import 'helpers/helpers';
+@import 'global';
+
+body.overflow-y-hide {
+  overflow-y: hidden;
+}
+
+/*!
+=====================================================
+                 =   MainCSS   =
+=====================================================
+*/
+
+//  Partials
+@import 'partials/partials';
+//  Pages
+@import 'pages/pages';
+//  Media
+@import 'responsive';
+
+/*!
+=====================================================
+               =   Global   =
+=====================================================
+*/
+
+.partners-table--item {
+  margin-bottom: 15px;
+  background-color: $white;
+  border-radius: $border-radius-5;
+  box-shadow: 0 2px 10px 0 #d8d8d8;
+  .flex-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 17px 20px 16px 17px;
+  }
+}
+
+.partner-logo {
+  // height: 110px;
+  // width: 161px;
+  img {
+    width: 150px;
+    // height: 100%;
+  }
+}
+
+.partner-rank {
+  h1 {
+    color: $blue;
+    font-size: 55px;
+    font-weight: $fw-500;
+    line-height: 83px;
+    margin-bottom: -12px;
+  }
+  .rate-count {
+    color: #838383;
+    font-size: $ftz-extra-small;
+    line-height: 23px;
+  }
+}
+
+.partner-link {
+  display: block;
+  margin-top: 8px;
+  color: #000;
+  text-align: center;
+  font-size: $ftz-mini;
+}
+
+.partner-button {
+  position: relative;
+  .partner-link {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.btn {
+  color: $white;
+  display: inline-block;
+  border-radius: $border-radius-5;
+  background-size: 300% 100%;
+  background-color: $blue;
+  font-size: $ftz-small;
+  font-family: $default-font-bold;
+  font-weight: normal;
+  line-height: 17px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: $transition;
+  &:hover {
+    background-position: right center;
+  }
+}
+
+/*!
+=====================================================
+            =   Aside Partner Table   =
+=====================================================
+*/
+
+.aside-partner-card {
+  width: $sticky-sidebar-w;
+  height: 565px;
+  text-align: center;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  padding-top: 28px;
+  @media only screen and (max-width: $breakpoint-lg) {
+    border-radius: unset;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .swiper-slide {
+      width: 100% !important;
+      .partner-logo {
+        margin: 0 auto;
+      }
+    }
+  }
+  .card-item {
+    cursor: grab;
+    font-size: $ftz-extra-small;
+    padding: 21px 50px;
+    margin: 0px 87px 58px;
+    border-radius: $border-radius-5;
+    background-color: $white;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.08);
+    @media only screen and (max-width: $breakpoint-md) {
+      margin: 0 auto 50px;
+      width: 262px;
+    }
+    .partner-info {
+      margin: 16px 0 0;
+      li {
+        margin-bottom: 1em;
+      }
+    }
+    .partner-rank {
+      margin: -10px 0 20px;
+    }
+    .partner-button .btn {
+      width: 100%;
+      padding: 14px 30px;
+      font-size: $ftz-normal;
+      font-weight: $fw-600;
+      border-radius: $border-radius-5;
+    }
+  }
+  .swiper-pagination {
+    bottom: 15px;
+  }
+}
+
+.reviews,
+.info-pages {
+  .container {
+    @media (max-width: $breakpoint-md) {
+      max-width: 100%;
+      padding: 0 10px;
+    }
+  }
+}
