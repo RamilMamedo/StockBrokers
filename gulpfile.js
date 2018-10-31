@@ -177,8 +177,8 @@ Scripts = () => {
       .src([
         './app/libs/jquery/jquery.min.js',
         './app/libs/resizeSensor.js',
-        './app/libs/isotope.js',
         './app/libs/stickySidebar.js',
+        './app/libs/ticker.js',
         './dist/js/core.js',
       ])
       .pipe(concat('vendors.min.js'))

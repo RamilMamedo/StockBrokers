@@ -69,21 +69,12 @@ body.overflow-y-hide {
   font-size: $ftz-mini;
 }
 
-.partner-button {
-  position: relative;
-  .partner-link {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-}
-
 .btn {
-  color: $white;
   display: inline-block;
-  border-radius: $border-radius-5;
-  background-size: 300% 100%;
+  color: $white;
+  padding: 15px 45px;
   background-color: $blue;
+  border-radius: $border-radius-5;
   font-size: $ftz-small;
   font-family: $default-font-bold;
   font-weight: normal;
@@ -92,9 +83,14 @@ body.overflow-y-hide {
   text-decoration: none;
   text-transform: uppercase;
   white-space: nowrap;
-  transition: $transition;
+  vertical-align: middle;
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  transition-duration: 0.5s;
   &:hover {
-    background-position: right center;
+    background-color: #3c8abe;
+    transform: scale(1.2);
+    transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
   }
 }
 
@@ -157,12 +153,9 @@ body.overflow-y-hide {
   }
 }
 
-.reviews,
-.info-pages {
-  .container {
-    @media (max-width: $breakpoint-md) {
-      max-width: 100%;
-      padding: 0 10px;
-    }
+main.container {
+  @media (max-width: $breakpoint-md) {
+    max-width: 100%;
+    padding: 0 10px;
   }
 }

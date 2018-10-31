@@ -30,14 +30,10 @@
     color: $black;
     text-align: center;
     font-family: $default-font-bold;
-    h1 {
-      font-size: 100px;
-      font-weight: bold;
-      margin: 0.75em 0;
-    }
     p {
       font-size: 32px;
-      margin-bottom: 1.5em;
+      margin: 1.5em 0;
+      line-height: 1.5;
     }
   }
 }

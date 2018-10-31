@@ -1,25 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="9px" height="8px" viewBox="0 0 9 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: sketchtool 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
-    <title>024FA9FF-4984-4E3F-B2D9-629DC9EBD7FA</title>
-    <desc>Created with sketchtool.</desc>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Home-old" transform="translate(-814.000000, -363.000000)" fill="#1DCD93">
-            <g id="Group-8" transform="translate(472.000000, 350.000000)">
-                <g id="Group-6">
-                    <g id="Group-29">
-                        <g id="Group-28">
-                            <g transform="translate(-120.000000, 8.000000)" id="Group-27-Copy">
-                                <g>
-                                    <g id="Group-26" transform="translate(153.000000, 0.000000)">
-                                        <path d="M314.394427,5.78885438 L317.276393,11.5527864 C317.523382,12.0467649 317.323158,12.6474379 316.82918,12.8944272 C316.690324,12.9638549 316.537211,13 316.381966,13 L310.618034,13 C310.065749,13 309.618034,12.5522847 309.618034,12 C309.618034,11.8447549 309.654179,11.6916418 309.723607,11.5527864 L312.605573,5.78885438 C312.852562,5.29487588 313.453235,5.09465154 313.947214,5.34164079 C314.140741,5.43840449 314.297663,5.59532698 314.394427,5.78885438 Z" id="Triangle"></path>
-                                    </g>
-                                </g>
-                            </g>
-                        </g>
-                    </g>
-                </g>
-            </g>
-        </g>
-    </g>
+<svg xmlns="http://www.w3.org/2000/svg" width="9" height="8">
+    <path fill="#1DCD93" fill-rule="evenodd" d="M5.394.789l2.882 5.764A1 1 0 0 1 7.382 8H1.618a1 1 0 0 1-.894-1.447L3.606.789a1 1 0 0 1 1.788 0z"/>
 </svg>

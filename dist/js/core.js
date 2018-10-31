@@ -77,4 +77,67 @@ $(document).ready(function () {
     additionalMarginTop: 20,
     additionalMarginBottom: 30
   });
+
+  // Preloader
+  var articles = $('.articles--grid');
+  articles.prev('.preload--spinner').fadeOut(100, function () {
+    articles.css({
+      opacity: '1'
+    });
+  });
+
+  // Currency rates
+  var ticker = $('.currency-ticker');
+  if (ticker.length > 0) {
+    var ratesAPI = location.origin + ticker.data('api');
+    // Taking "EUR" as a base currency by default
+    if (ticker.data('base').length > 0) ratesAPI += '?base=' + ticker.data('base');else ratesAPI += '?base=EUR';
+    // Specify which currencies to fetch
+    if (ticker.data('symbols').length > 0) ratesAPI += '&symbols=' + ticker.data('symbols');
+
+    $.getJSON(ratesAPI, function (data, status) {
+      if (status === 'success') {
+        var exchangeRates = {
+          base: data.data['today'].base,
+          today: data.data['today'].rates,
+          yesterday: data.data['yesterday'].rates
+        };
+
+        initCurrencyTicker(ticker, exchangeRates);
+      }
+    });
+  }
+
+  // Initialize ticker
+  function initCurrencyTicker(ticker, exchangeRates) {
+    var tickerList = ticker.find('.ticker--content ul');
+    var tickerListHTML = tickerList.html();
+    // Place data into separate objects
+    var latest = exchangeRates['today'],
+        last = exchangeRates['yesterday'],
+        base = exchangeRates['base'];
+    // Calculate flow, difference and percent change before passing items to DOM
+    for (var c in latest) {
+      var diff, flow, percent;
+      diff = latest[c] - last[c];
+      percent = (diff / last[c] * 100.0).toFixed(2);
+      percent = percent == 0 ? 0 .toFixed(2) : percent;
+      if (percent == 0) flow = 'const';else if (percent > 0) flow = 'asc';else if (percent < 0) flow = 'desc';
+      // HTML list item as a string
+      var tickerItem = '<li class="ticker--currency">\n        <span>' + base + ' ' + c + '</span>\n        <span>' + latest[c].toFixed(4) + '</span>\n        <span class="percent ' + flow + '">' + percent + '%</span>\n      </li>';
+      tickerListHTML += tickerItem;
+    }
+    // Pass items to HTML list
+    tickerList.prev('.preload--spinner').fadeOut(100, function () {
+      tickerList.html(tickerListHTML);
+      ticker.currencyTicker({
+        effect: 'scroll',
+        scrollType: 'continuous',
+        scrollStart: 'inside',
+        scrollInterval: 20,
+        transitionTime: 500,
+        autoplay: true
+      });
+    });
+  }
 });
