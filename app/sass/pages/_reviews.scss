@@ -4,27 +4,13 @@
 =====================================================
 */
 
-//150w
-//107h
-
 .reviews {
   margin: 30px 0 110px;
   .partners-table--item {
-    padding: 17px 16px 18px 17px;
     @media (max-width: $breakpoint-lg) {
       padding: 20px 50px;
-    }
-    .flex-block {
-      padding: 0;
-      @media (max-width: $breakpoint-lg) {
-        flex-direction: column;
-        text-align: center;
-      }
-    }
-    .partner-logo {
-      @media (max-width: $breakpoint-lg) {
-        margin: 40px 0;
-      }
+      flex-direction: column;
+      text-align: center;
     }
     .partner-info {
       max-width: 550px;
@@ -70,6 +56,11 @@
         font-weight: $fw-500;
         padding: 12px 35px;
       }
+    }
+  }
+  .partner-logo {
+    @media (max-width: $breakpoint-lg) {
+      margin: 40px 0;
     }
   }
 }

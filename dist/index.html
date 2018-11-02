@@ -64,134 +64,11 @@
         <!-- /Page Title -->
     </section>
 
-    <style>
-        /* CURRENCY */
-  .currency-ticker {
-    width: 100%;
-    height: 30px;
-    font-size: 16px;
-    margin-top: 20px;
-    background-color: #fff;
-    border: 1px solid #334056;
-    border-radius: 3px;
-    overflow: hidden;
-  }
-
-  .ticker--body {
-    position: relative;
-  }
-
-  .ticker--content {
-    width: calc(100% - 58px);
-    height: 28px;
-    position: absolute;
-    left: 58px;
-    overflow: hidden;
-  }
-
-  .ticker--content ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  .ticker--content ul>li {
-    display: flex;
-    align-items: center;
-    height: 28px;
-    padding: 0 10px;
-    float: left;
-  }
-
-  .ticker--hide {
-    display: none
-  }
-
-  .ticker--controls {
-    display: flex;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-
-  .ticker--next,
-  .ticker--prev {
-    height: 28px;
-    width: 28px;
-    background-image: url(../img/arrow-black.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: #f5f7f9;
-    background-size: 14px;
-    cursor: pointer;
-  }
-
-  .ticker--next:hover,
-  .ticker--prev:hover {
-    background-color: #334056;
-    background-image: url(../img/arrow-white.svg);
-  }
-
-  .ticker--next {
-    width: 30px;
-    transform: rotate(-180deg);
-    border-left: 1px solid #334056;
-    border-right: 1px solid #334056;
-  }
-
-  .ticker--currency span {
-    display: inline-block;
-    position: relative;
-    vertical-align: middle;
-    margin-right: 2.5px;
-  }
-
-  .ticker--currency span:first-child {
-    font-weight: bold;
-  }
-
-  .number.asc,
-  .percent.asc {
-    background-color: #9df4dc;
-  }
-
-  .number.desc,
-  .percent.desc {
-    background-color: #f49db5;
-  }
-
-  .percent:not(.const) {
-    margin-left: 13px;
-  }
-
-  .percent.const {
-    background-color: rgba(0, 0, 0, 0.14);
-  }
-
-  .percent:not(.const):before {
-    content: '';
-    position: absolute;
-    left: -13px;
-    top: 5px;
-    height: 0;
-    width: 0;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-  }
-
-  .percent.asc:before {
-    border-bottom: 10px solid #1dcd93;
-  }
-
-  .percent.desc:before {
-    border-top: 10px solid #cd1d57;
-  }
-</style>
 
     <!-- Main -->
     <main class="container">
-        <!-- Filter -->
-        <section class="filter-by">
+        <!-- Filter-Slider -->
+        <section class="filter-slider">
             <div class="filter-block">
                 <span>Sort By</span>
                 <select name="filter" id="filter">
@@ -205,24 +82,13 @@
             <div class="currency-ticker" data-api="{% url 'exchange_rates' %}" data-base="EUR" data-symbols="USD,JPY,GBP,AUD,CAD,CHF,HKD,KRW">
                 <div class="ticker--body">
                     <div class="ticker--content">
-                        <div class="preload--spinner in-center">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
                         <ul>
-
                         </ul>
-                    </div>
-                    <div class="ticker--controls">
-                        <div class="ticker--prev"></div>
-                        <div class="ticker--next"></div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- /Filter -->
+        <!-- /Filter-Slider -->
         <!-- Index -->
         <section class="index">
             <div class="partners-table">
@@ -495,6 +361,7 @@
                                 <h4>$100-$600</h4>
                                 <span>in cash bonus with a qualifying deposit</span>
                             </div>
+                            <a href="" class="partner-link">Read Review</a>
                         </div>
                         <div class="bottom-line">
                             <h6>The Bottom Line</h6>
@@ -502,7 +369,7 @@
                                 TD Ameritrade makes up for higher-than-average trading commissions with better-than-average service,
                                 research and trading tools that will make everyone from beginner investors to active traders happy.
                             </p>
-                            <a href="">Read Review</a>
+                            <a href="" class="partner-link">Read Review</a>
                         </div>
                     </div>
                 </div>

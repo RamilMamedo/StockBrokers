@@ -12,18 +12,18 @@
   flex-direction: row;
   align-items: flex-start;
   align-content: flex-start;
-  @media only screen and (max-width: $breakpoint-lg) {
+  @media (max-width: $breakpoint-lg) {
     flex-direction: column;
   }
   .sticky-sidebar {
     padding-right: 50px;
-    @media only screen and (max-width: $breakpoint-lg) {
+    @media (max-width: $breakpoint-lg) {
       order: 2;
       margin: 0 auto !important;
       padding-right: unset;
       border-right: unset !important;
     }
-    @media only screen and (max-width: $breakpoint-md) {
+    @media (max-width: $breakpoint-md) {
       margin: 0;
       width: 100%;
     }
