@@ -58,6 +58,7 @@
       background-repeat: no-repeat;
       background-position: center;
       transition: $transition;
+      pointer-events: none;
       @media (max-width: $breakpoint-md) {
         left: 95%;
       }
@@ -182,17 +183,18 @@
         flex-wrap: wrap;
         justify-content: center;
         @media (max-width: $breakpoint-md) {
-          min-width: 50%;
+          max-width: unset;
+          width: 50%;
           flex-direction: column;
           padding: 10px 15px;
         }
         @media (max-width: $breakpoint-sm) {
           max-width: unset;
-          margin: 0 30px;
           padding: 0;
+          width: 58%;
+
         }
         .partner-logo {
-          height: 100px;
           display: flex;
           align-items: center;
           @media (max-width: $breakpoint-md) {
@@ -239,11 +241,15 @@
         flex-direction: row;
         max-width: 508px;
         @media (max-width: $breakpoint-md) {
-          max-width: 50%;
+          max-width: unset;
+          width: 50%;
           margin-left: unset;
         }
         @media (max-width: $breakpoint-sm) {
           max-width: unset;
+          width: unset;
+          width: 41%;
+
         }
         h6 {
           font-size: $ftz-normal;
@@ -278,11 +284,7 @@
             padding: 20px;
             flex-direction: column;
             justify-content: unset;
-            background: linear-gradient(
-              270deg,
-              #ffffff 90%,
-              #f3f3f3 100%
-            );
+            background: linear-gradient(270deg, #ffffff 90%, #f3f3f3 100%);
             .top-line--data {
               margin-bottom: 20px;
             }
@@ -336,6 +338,9 @@
 .index-bottom-text {
   color: $black;
   margin: 65px 0;
+  @media (max-width: $breakpoint-md) {
+    text-align: center;
+  }
   h1 {
     margin-bottom: 22px;
     font-size: 24px;
@@ -359,6 +364,9 @@
     font-weight: normal;
     line-height: 29px;
     text-transform: uppercase;
+    @media (max-width: $breakpoint-md) {
+      text-align: center;
+    }
   }
   .tip-item {
     display: flex;
@@ -368,15 +376,36 @@
     background-color: $white;
     border-radius: $border-radius-5;
     box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.12);
+    @media (max-width: $breakpoint-md) {
+      padding: 0;
+    }
     .tip-picture {
       margin-right: 90px;
+      @media (max-width: $breakpoint-md) {
+        min-width: 30%;
+        padding: 0 10px;
+        margin-right: unset;
+        text-align: center;
+      }
+      @media (max-width: $breakpoint-sm) {
+        min-width: 35%;
+      }
     }
     .tip-content {
       max-width: 640px;
+      @media (max-width: $breakpoint-md) {
+        padding: 20px 30px 20px;
+        background: linear-gradient(270deg, #ffffff 90%, #f3f3f3 100%);
+      }
+      @media (max-width: $breakpoint-sm) {
+        min-width: 60%;
+        padding: 10px 15px 20px;
+      }
       h2 {
         font-size: 25px;
         font-weight: normal;
         line-height: 30px;
+        margin-bottom: 10px;
       }
       p {
         font-size: $ftz-small;

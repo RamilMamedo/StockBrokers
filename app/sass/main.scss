@@ -36,11 +36,9 @@ body.overflow-y-hide {
 }
 
 .partner-logo {
-  // width: 150px;
-  // height: 100px;
+  width: 160px;
+  height: 85px;
   img {
-    width: 150px;
-    // height: 100px;
   }
 }
 
@@ -83,12 +81,10 @@ body.overflow-y-hide {
   white-space: nowrap;
   vertical-align: middle;
   transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  transition-duration: 0.5s;
+  transition-duration: 0.3s;
   &:hover {
     background-color: #3c8abe;
-    transform: scale(1.2);
-    transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+    transform: scale(1.1);
   }
 }
 
@@ -148,12 +144,5 @@ body.overflow-y-hide {
   }
   .swiper-pagination {
     bottom: 15px;
-  }
-}
-
-main.container {
-  @media (max-width: $breakpoint-md) {
-    max-width: 100%;
-    padding: 0 10px;
   }
 }
