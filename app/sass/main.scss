@@ -1,28 +1,21 @@
 @import 'helpers/helpers';
 @import 'global';
 
+/*!
+=====================================================
+                  =   Global   =
+=====================================================
+*/
+
 body.overflow-y-hide {
   overflow-y: hidden;
 }
 
-/*!
-=====================================================
-                 =   MainCSS   =
-=====================================================
-*/
-
-//  Partials
-@import 'partials/partials';
-//  Pages
-@import 'pages/pages';
-//  Media
-@import 'responsive';
-
-/*!
-=====================================================
-               =   Global   =
-=====================================================
-*/
+.review,
+.market,
+.markets-update {
+  margin: 35px 0 70px;
+}
 
 .partners-table--item {
   display: flex;
@@ -42,27 +35,15 @@ body.overflow-y-hide {
   }
 }
 
-.partner-rank {
-  h1 {
-    color: $blue;
-    font-size: 55px;
-    font-weight: $fw-500;
-    line-height: 83px;
-    margin-bottom: -12px;
-  }
-  .rate-count {
-    color: #838383;
-    font-size: $ftz-extra-small;
-    line-height: 23px;
-  }
-}
-
 .partner-link {
   display: block;
   margin-top: 8px;
   color: #000;
   text-align: center;
   font-size: $ftz-mini;
+  &:visited {
+    color: $blue;
+  }
 }
 
 .btn {
@@ -90,59 +71,10 @@ body.overflow-y-hide {
 
 /*!
 =====================================================
-            =   Aside Partner Table   =
+                 =   MainCSS   =
 =====================================================
 */
 
-.aside-partner-card {
-  width: $sticky-sidebar-w;
-  height: 565px;
-  text-align: center;
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
-  padding-top: 28px;
-  @media (max-width: $breakpoint-lg) {
-    border-radius: unset;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    .swiper-slide {
-      width: 100% !important;
-      .partner-logo {
-        margin: 0 auto;
-      }
-    }
-  }
-  .card-item {
-    cursor: grab;
-    font-size: $ftz-extra-small;
-    padding: 21px 50px;
-    margin: 0px 87px 58px;
-    border-radius: $border-radius-5;
-    background-color: $white;
-    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.08);
-    @media (max-width: $breakpoint-md) {
-      margin: 0 auto 50px;
-      width: 262px;
-    }
-    .partner-info {
-      margin: 16px 0 0;
-      li {
-        margin-bottom: 1em;
-      }
-    }
-    .partner-rank {
-      margin: -10px 0 20px;
-    }
-    .partner-button .btn {
-      width: 100%;
-      padding: 14px 30px;
-      font-size: $ftz-normal;
-      font-weight: $fw-600;
-      border-radius: $border-radius-5;
-    }
-  }
-  .swiper-pagination {
-    bottom: 15px;
-  }
-}
+@import 'partials/partials';
+@import 'pages/pages';
+@import 'responsive';

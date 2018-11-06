@@ -1,5 +1,11 @@
 /*!
 =====================================================
+              =   Index   =
+=====================================================
+*/
+
+/*!
+=====================================================
               =   Filter Slider   =
 =====================================================
 */
@@ -26,9 +32,11 @@
       margin-top: 10px;
     }
     span {
+      display: inline-block;
+      height: 19px;
       color: #e0e0e0;
       font-size: $ftz-extra-small;
-      line-height: 14px;
+      line-height: 19px;
       border-right: 1px solid #e0e0e0;
       padding-right: 10px;
     }
@@ -44,6 +52,9 @@
       border: none;
       outline: none;
       -webkit-appearance: none;
+      -moz-appearance: none;
+      -o-appearance: none;
+      appearance: none;
     }
     &::after {
       content: '';
@@ -60,7 +71,10 @@
       transition: $transition;
       pointer-events: none;
       @media (max-width: $breakpoint-md) {
-        left: 95%;
+        left: 94%;
+      }
+      @media (max-width: $breakpoint-sm) {
+        left: 90%;
       }
     }
     &:focus,
@@ -159,182 +173,185 @@
 
 /*!
 =====================================================
-                =   Index Main   =
+            =   Index Partners Table   =
 =====================================================
 */
 
-.index {
-  .partners-table {
-    .partners-table--item {
+.partners-table {
+  .partners-table--item {
+    display: flex;
+    align-items: stretch;
+    padding: 40px 60px;
+    border-radius: $border-radius-5;
+    @media (max-width: $breakpoint-lg) {
+      padding: 30px;
+    }
+    @media (max-width: $breakpoint-md) {
+      padding: unset;
+    }
+    .partner-media {
+      max-width: 200px;
       display: flex;
-      padding: 50px 60px 33px;
-      border-radius: $border-radius-5;
-      @media (max-width: $breakpoint-lg) {
-        padding: 50px 30px 33px;
-      }
+      align-items: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
       @media (max-width: $breakpoint-md) {
-        padding: unset;
+        max-width: unset;
+        width: 50%;
+        flex-direction: column;
       }
-      .partner-media {
-        max-width: 200px;
+      @media (max-width: $breakpoint-sm) {
+        max-width: unset;
+        padding: 0;
+        width: 58%;
+      }
+      .partner-logo {
+        @media (max-width: $breakpoint-md) {
+          margin-top: 15px;
+        }
+      }
+      .rating-stars {
+        margin-top: 30px;
+        @media (max-width: $breakpoint-md) {
+          margin-top: 15px;
+        }
+      }
+      .partner-button {
+        margin: 21px 0 18px;
+        @media (max-width: $breakpoint-md) {
+          margin: 18px 0;
+        }
+      }
+      .icons {
+        width: 100%;
         display: flex;
         align-items: center;
-        flex-direction: row;
-        flex-wrap: wrap;
         justify-content: center;
         @media (max-width: $breakpoint-md) {
-          max-width: unset;
-          width: 50%;
-          flex-direction: column;
-          padding: 10px 15px;
+          margin-bottom: 15px;
         }
-        @media (max-width: $breakpoint-sm) {
-          max-width: unset;
-          padding: 0;
-          width: 58%;
-
-        }
-        .partner-logo {
-          display: flex;
-          align-items: center;
-          @media (max-width: $breakpoint-md) {
-            height: unset;
+        .icon {
+          margin: 0 7px;
+          &:first-child {
+            margin-left: 0;
           }
-        }
-        .rating-stars {
-          margin-top: 30px;
-          @media (max-width: $breakpoint-md) {
-            margin-top: 15px;
+          &:last-child {
+            margin-right: 0;
           }
-        }
-        .partner-button {
-          margin: 21px 0 18px;
-          @media (max-width: $breakpoint-md) {
-            margin: 18px 0;
-          }
-        }
-        .icons {
-          width: 100%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          .icon {
-            margin: 0 7px;
-            &:first-child {
-              margin-left: 0;
-            }
-            &:last-child {
-              margin-right: 0;
-            }
-            img {
-              width: 20px;
-              height: 20px;
-              object-fit: contain;
-            }
+          img {
+            width: 20px;
+            height: 20px;
+            object-fit: contain;
           }
         }
       }
-      .partner-info {
-        margin-left: 60px;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        max-width: 508px;
+    }
+    .partner-info {
+      margin-left: 60px;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      max-width: 508px;
+      @media (max-width: $breakpoint-md) {
+        max-width: unset;
+        width: 50%;
+        margin-left: unset;
+      }
+      @media (max-width: $breakpoint-sm) {
+        max-width: unset;
+        width: unset;
+        width: 41%;
+      }
+      h6 {
+        font-size: $ftz-normal;
+        font-family: $default-font-bold;
+        font-weight: normal;
+        line-height: 18px;
         @media (max-width: $breakpoint-md) {
-          max-width: unset;
-          width: 50%;
-          margin-left: unset;
+          font-size: 12px;
+          line-height: 14px;
+          margin: 0;
         }
-        @media (max-width: $breakpoint-sm) {
-          max-width: unset;
-          width: unset;
-          width: 41%;
-
+      }
+      .partner-link {
+        color: #686868;
+        font-size: $ftz-small;
+        letter-spacing: 0.54px;
+        line-height: 17px;
+        text-decoration: underline;
+      }
+      .top-line {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        .partner-link {
+          display: none;
+          text-align: left;
+          margin: 0;
+          font-size: 10px;
+          letter-spacing: 0.38px;
+          line-height: 12px;
         }
-        h6 {
-          font-size: $ftz-normal;
-          font-family: $default-font-bold;
+        @media (max-width: $breakpoint-md) {
+          padding: 20px;
+          flex-direction: column;
+          justify-content: unset;
+          background: linear-gradient(270deg, #ffffff 90%, #f3f3f3 100%);
+          .top-line--data {
+            margin-bottom: 20px;
+          }
+          .partner-link {
+            display: block;
+          }
+        }
+        h4 {
+          font-size: 30px;
           font-weight: normal;
-          line-height: 18px;
+          line-height: 36px;
+          margin-bottom: 1px;
           @media (max-width: $breakpoint-md) {
-            font-size: 12px;
-            line-height: 14px;
+            font-family: $default-font-light;
+            font-size: $ftz-large;
+            line-height: 22px;
             margin: 0;
           }
         }
-        .partner-link {
-          color: #686868;
+        span {
+          max-width: 155px;
+          display: inline-block;
+          color: #c0bfbf;
           font-size: $ftz-small;
-          letter-spacing: 0.54px;
-          line-height: 17px;
-        }
-        .top-line {
-          width: 100%;
-          display: flex;
-          justify-content: space-between;
-          .partner-link {
-            display: none;
-            text-align: left;
-            margin: 0;
+          line-height: 16px;
+          @media (max-width: $breakpoint-md) {
+            max-width: unset;
             font-size: 10px;
-            letter-spacing: 0.38px;
             line-height: 12px;
           }
-          @media (max-width: $breakpoint-md) {
-            padding: 20px;
-            flex-direction: column;
-            justify-content: unset;
-            background: linear-gradient(270deg, #ffffff 90%, #f3f3f3 100%);
-            .top-line--data {
-              margin-bottom: 20px;
-            }
-            .partner-link {
-              display: block;
-            }
-          }
-          h4 {
-            font-size: 30px;
-            font-weight: normal;
-            line-height: 36px;
-            margin-bottom: 1px;
-            @media (max-width: $breakpoint-md) {
-              font-family: $default-font-light;
-              font-size: $ftz-large;
-              line-height: 22px;
-              margin: 0;
-            }
-          }
-          span {
-            max-width: 130px;
-            display: inline-block;
-            color: #c0bfbf;
-            font-size: $ftz-small;
-            line-height: 16px;
-            @media (max-width: $breakpoint-md) {
-              max-width: unset;
-              font-size: 10px;
-              line-height: 12px;
-            }
-          }
         }
-        .bottom-line {
-          display: flex;
-          flex-direction: row;
-          flex-wrap: wrap;
-          align-items: flex-end;
-          @media (max-width: $breakpoint-md) {
-            display: none;
-          }
-          p {
-            line-height: 20px;
-          }
+      }
+      .bottom-line {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        @media (max-width: $breakpoint-md) {
+          display: none;
+        }
+        p {
+          line-height: 20px;
         }
       }
     }
   }
 }
 
-// Index Bottom Text
+/*!
+=====================================================
+            =   Index Bottom Text   =
+=====================================================
+*/
+
 .index-bottom-text {
   color: $black;
   margin: 65px 0;
@@ -354,7 +371,13 @@
     line-height: 19px;
   }
 }
-// Tips
+
+/*!
+=====================================================
+            =   Index Tips   =
+=====================================================
+*/
+
 .tips {
   margin-bottom: 85px;
   h1 {
@@ -376,11 +399,22 @@
     background-color: $white;
     border-radius: $border-radius-5;
     box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.12);
+    @media (max-width: $breakpoint-lg) {
+      padding: 40px;
+    }
     @media (max-width: $breakpoint-md) {
       padding: 0;
     }
     .tip-picture {
-      margin-right: 90px;
+      width: 90px;
+      height: 90px;
+      display: flex;
+      margin-right: 80px;
+      justify-content: center;
+      @media (max-width: $breakpoint-lg) {
+        display: unset;
+        margin-right: 40px;
+      }
       @media (max-width: $breakpoint-md) {
         min-width: 30%;
         padding: 0 10px;
@@ -408,8 +442,8 @@
         margin-bottom: 10px;
       }
       p {
+        font-family: $default-font-light;
         font-size: $ftz-small;
-        font-weight: 300;
         line-height: 17px;
       }
     }

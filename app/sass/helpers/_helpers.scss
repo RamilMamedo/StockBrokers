@@ -2,7 +2,6 @@
 @import 'mixins';
 @import 'fonts';
 @import 'grid';
-@import 'animate';
 
 //  Libs Helpers
 //
@@ -16,8 +15,8 @@
     flex-direction: column;
   }
   .sticky-sidebar {
-    padding-right: 50px;
     @media (max-width: $breakpoint-lg) {
+      width: 100%;
       order: 2;
       margin: 0 auto !important;
       padding-right: unset;
@@ -25,7 +24,6 @@
     }
     @media (max-width: $breakpoint-md) {
       margin: 0;
-      width: 100%;
     }
   }
 }

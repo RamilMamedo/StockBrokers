@@ -1,8 +1,141 @@
 /*!
 =====================================================
-               =   Markets Update    =
+              =   Markets Update    =
 =====================================================
 */
 
-.markets-update {
+.markets-update-articles {
+  width: 666px;
+  padding: 30px 35px 90px;
+  background-color: $white;
+  border-radius: $border-radius-5;
+  box-shadow: 0 2px 4px 0 #d8d8d8;
+  @media (max-width: $breakpoint-lg) {
+    width: 100%;
+    padding: 30px 15px;
+  }
+}
+
+/*!
+=====================================================
+              =   Market Article    =
+=====================================================
+*/
+
+.market-article {
+  margin-bottom: 30px;
+  padding-bottom: 60px;
+  border-bottom: 1px solid #dfdfdf;
+  .article-title {
+    font-family: Helvetica;
+    font-size: 25px;
+    font-family: $default-font-bold;
+    font-weight: normal;
+    line-height: 30px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+  .article-date {
+    font-family: $default-font-light;
+    font-size: 12px;
+    font-style: oblique;
+    line-height: 14px;
+    margin-bottom: 25px;
+  }
+  .article-picture {
+    display: flex;
+    float: left;
+    width: 280px;
+    height: 220px;
+    margin-top: 10px;
+    margin-right: 15px;
+    box-shadow: 0 2px 4px 0 #d8d8d8;
+    border-radius: $border-radius-5;
+    img {
+      border-radius: $border-radius-5;
+    }
+    @media (max-width: $breakpoint-md) {
+      width: 100%;
+      margin: 0;
+      margin-bottom: 20px;
+    }
+  }
+  .article-preview {
+    font-family: $default-font-light;
+
+    p {
+      line-height: 30px;
+    }
+    h2 {
+      margin-top: 15px;
+      font-size: 25px;
+      line-height: 30px;
+    }
+    img {
+      margin-bottom: 20px;
+    }
+  }
+  .article-btn {
+    margin-top: 40px;
+    text-align: center;
+    .btn {
+      padding: 12px 15px;
+    }
+  }
+  &:last-child {
+    margin-bottom: unset;
+    border-bottom: unset;
+  }
+}
+
+/*!
+=====================================================
+               =   Markets Aside    =
+=====================================================
+*/
+
+.markets-aside {
+  width: 252px;
+  margin-left: 20px;
+  background-color: $white;
+  border-radius: $border-radius-5;
+  box-shadow: 0 2px 4px 0 #d8d8d8;
+  @media (max-width: $breakpoint-lg) {
+    margin-left: unset;
+    margin-top: 35px;
+    width: 100%;
+  }
+  .aside-title {
+    margin: 0;
+    padding: 12px;
+    color: #ffffff;
+    font-size: 18px;
+    font-family: $default-font-bold;
+    font-weight: normal;
+    line-height: 22px;
+    text-align: center;
+    background-color: #82898d;
+    border-top-right-radius: $border-radius-5;
+    border-top-left-radius: $border-radius-5;
+  }
+  .aside-content {
+    ul {
+      padding: 20px 0 60px;
+      li {
+        padding: 0 25px;
+        margin-bottom: 15px;
+        a {
+          text-decoration: none;
+          color: #389fd7;
+          font-size: 14px;
+          line-height: 17px;
+          opacity: 1;
+          transition: $transition;
+          &:hover {
+            opacity: 0.7;
+          }
+        }
+      }
+    }
+  }
 }
