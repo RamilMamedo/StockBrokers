@@ -77,13 +77,6 @@
         left: 90%;
       }
     }
-    &:focus,
-    &:focus-within {
-      &::after {
-        top: 30%;
-        transform: rotate(-180deg);
-      }
-    }
   }
   /* CURRENCY */
   .currency-ticker {
@@ -297,6 +290,8 @@
           padding: 20px;
           flex-direction: column;
           justify-content: unset;
+          border-top-right-radius: 5px;
+          border-bottom-right-radius: 5px;
           background: linear-gradient(270deg, #ffffff 90%, #f3f3f3 100%);
           .top-line--data {
             margin-bottom: 20px;
@@ -429,6 +424,8 @@
       max-width: 640px;
       @media (max-width: $breakpoint-md) {
         padding: 20px 30px 20px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
         background: linear-gradient(270deg, #ffffff 90%, #f3f3f3 100%);
       }
       @media (max-width: $breakpoint-sm) {

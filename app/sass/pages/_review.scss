@@ -1,69 +1,202 @@
 /*!
 =====================================================
-               =   Reviews Page   =
+               =   Review Page   =
 =====================================================
 */
 
 .review {
   .review-content {
-
+    width: 671px;
+    @media (max-width: $breakpoint-lg) {
+      width: 100%;
+    }
+  }
+  .partners-table {
+    margin-bottom: 40px;
   }
   .partners-table--item {
-    padding: 45px 30px 35px 15px;
+    padding: 0;
     @media (max-width: $breakpoint-lg) {
-      padding: 20px 50px;
+      padding: 0;
+      flex-direction: row;
+    }
+    .partner-media {
+      max-width: 330px;
+      padding: 20px 0;
       flex-direction: column;
-      text-align: center;
+      margin: 0 auto;
     }
     .partner-info {
-      max-width: 550px;
-      font-size: $ftz-small;
-      color: $black;
+      width: 420px;
       line-height: 17px;
-      margin: 0 auto 0 20px;
+      margin: 0;
+      padding: 20px 40px;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      background: linear-gradient(270deg, #ffffff 90%, #f3f3f3 100%);
       @media (max-width: $breakpoint-lg) {
-        padding: 0 15px;
-        margin: 15px 0 0;
-        max-height: unset;
-        order: 3;
-      }
-      p {
-        margin-bottom: 20px;
       }
       h6 {
-        font-size: 18px;
         font-family: $default-font-bold;
         font-weight: normal;
-        line-height: 22px;
-        margin-bottom: 14px;
+        margin-bottom: 5px;
+        font-size: 15px;
+        line-height: 18px;
       }
-      .partner-link {
-        margin: 0;
-        text-align: left;
-        color: $blue;
-        font-family: $default-font-bold;
-        font-size: $ftz-extra-small;
-        line-height: 14px;
-        text-decoration: none;
-        text-transform: uppercase;
-        @media (max-width: $breakpoint-lg) {
-          text-align: center;
+      .top-line {
+        flex-direction: column;
+        justify-content: start;
+        span {
+          max-width: unset;
+          font-size: 13px;
+          line-height: 16px;
+        }
+        .top-line--data {
+          margin-bottom: 30px;
         }
       }
     }
     .partner-button {
       @media (max-width: $breakpoint-lg) {
-        order: 2;
       }
       .btn {
         font-weight: $fw-500;
-        padding: 12px 35px;
+        padding: 12px 45px;
       }
     }
   }
-  .partner-logo {
-    @media (max-width: $breakpoint-lg) {
-      margin: 40px 0;
+  .review-text {
+    h3 {
+      font-family: $default-font-bold;
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 24px;
+      padding-bottom: 10px;
+      margin-bottom: 40px;
+      border-bottom: 1px solid #979797;
+    }
+    ul {
+      list-style: disc;
+      padding: 0 15px;
+      margin-bottom: 20px;
+      li {
+        line-height: 30px;
+      }
+    }
+    .table {
+      width: 100%;
+      margin-top: 30px;
+      border-radius: 5px;
+      box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.11);
+      thead {
+        color: #fff;
+        background-color: #82898d;
+        th {
+          text-transform: uppercase;
+          padding: 12px 0 12px 30px;
+          padding: 12px 30px;
+          font-family: $default-font-bold;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 17px;
+        }
+        th:first-child {
+          border-top-left-radius: 5px;
+        }
+        th:last-child {
+          border-top-right-radius: 5px;
+        }
+      }
+      tbody {
+        td {
+          padding: 30px 0 30px 30px;
+          padding: 30px;
+        }
+        tr:nth-child(odd) {
+          background-color: #fff;
+        }
+        tr:last-child {
+          td:first-child {
+            border-bottom-left-radius: 5px;
+          }
+          td:last-child {
+            border-bottom-right-radius: 5px;
+          }
+        }
+        .name {
+          font-size: 18px;
+          line-height: 20px;
+          min-width: 230px;
+        }
+        .rating {
+          font-family: $default-font-bold;
+          font-weight: normal;
+          font-size: 24px;
+          line-height: 29px;
+          text-align: center;
+        }
+        .comment {
+          color: #767676;
+          font-size: 14px;
+          line-height: 17px;
+        }
+      }
+    }
+  }
+}
+
+/*!
+=====================================================
+               =   Aside Table    =
+=====================================================
+*/
+
+.aside-table {
+  width: 252px;
+  margin-left: 20px;
+  background-color: $white;
+  box-shadow: 0 2px 4px 0 #d8d8d8;
+  border-radius: $border-radius-5;
+  @media (max-width: $breakpoint-lg) {
+    margin-left: unset;
+    margin-top: 35px;
+    width: 100%;
+  }
+  .aside-title {
+    margin: 0;
+    padding: 12px;
+    color: #ffffff;
+    font-size: 18px;
+    font-family: $default-font-bold;
+    font-weight: normal;
+    line-height: 22px;
+    text-align: center;
+    background-color: #82898d;
+    border-top-right-radius: $border-radius-5;
+    border-top-left-radius: $border-radius-5;
+  }
+  .aside-partners {
+    .partner {
+      padding: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #f8f8f8;
+      img {
+        height: 63px;
+        width: 96px;
+        background-color: $white;
+        border-radius: $border-radius-5;
+      }
+      .btn {
+        padding: 12px 18px;
+      }
+      &:nth-child(even) {
+        background-color: #fff;
+      }
+      &:last-child {
+        border-radius: $border-radius-5;
+      }
     }
   }
 }

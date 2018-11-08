@@ -1,137 +1,162 @@
 //= ./layouts/head.html
-//= ./layouts/partials/header.html
 
-<!-- Main -->
-<main class="container">
-    <!-- Review Page -->
-    <section class="review">
-        <div class="sticky-sidebar-parent">
-            <!-- Review Content -->
-            <section class="review-content">
-                <div class="partners-table">
-                    <div class="partners-table--item">
-                        <div class="partner-media">
-                            <div class="partner-logo">
-                                <img src="img/partners/1.png" alt="logo" />
+<!-- Review Page -->
+<section class="review">
+    <div class="sticky-sidebar-parent">
+        <!-- Review Content -->
+        <section class="review-content">
+            <div class="partners-table">
+                <div class="partners-table--item">
+                    <div class="partner-media">
+                        <div class="partner-logo">
+                            <img src="img/partners/1.png" alt="logo" />
+                        </div>
+                        //= ./layouts/partials/stars.html
+                        <div class="partner-button">
+                            <a class="btn" target="_blank" rel="noopener" data-goal-name="{{ item.name }}" href="#">Visit
+                                Site</a>
+                        </div>
+                        <div class="icons">
+                            <div class="icon">
+                                <img src="img/layers/clock.svg" alt="">
                             </div>
-                            //= ./layouts/partials/stars.html
-                            <div class="partner-button">
-                                <a class="btn" target="_blank" rel="noopener" data-goal-name="{{ item.name }}" href="#">Visit
-                                    Site</a>
+                            <div class="icon">
+                                <img src="img/layers/call.svg" alt="">
                             </div>
-                            <div class="icons">
-                                <div class="icon">
-                                    <img src="img/layers/clock.svg" alt="">
-                                </div>
-                                <div class="icon">
-                                    <img src="img/layers/call.svg" alt="">
-                                </div>
-                                <div class="icon">
-                                    <img src="img/layers/letter-active.svg" alt="">
-                                </div>
-                                <div class="icon">
-                                    <img src="img/layers/message.svg" alt="">
-                                </div>
+                            <div class="icon">
+                                <img src="img/layers/letter-active.svg" alt="">
+                            </div>
+                            <div class="icon">
+                                <img src="img/layers/message.svg" alt="">
                             </div>
                         </div>
-                        <div class="partner-info">
-                            <div class="top-line">
-                                <div class="top-line--data">
-                                    <h6>Fees</h6>
-                                    <h4>$6.95</h4>
-                                    <span>per trade</span>
-                                </div>
-                                <div class="top-line--data">
-                                    <h6>Account Minimum</h6>
-                                    <h4>$0</h4>
-                                </div>
-                                <div class="top-line--data">
-                                    <h6>Promotion</h6>
-                                    <h4>$100-$600</h4>
-                                    <span>in cash bonus with a qualifying deposit</span>
-                                </div>
+                    </div>
+                    <div class="partner-info">
+                        <div class="top-line">
+                            <div class="top-line--data">
+                                <h6>Fees</h6>
+                                <h4>$6.95</h4>
+                                <span>per trade</span>
                             </div>
-                            <div class="bottom-line">
-                                <h6>The Bottom Line</h6>
-                                <p>
-                                    TD Ameritrade makes up for higher-than-average trading commissions with
-                                    better-than-average service,
-                                    research and trading tools that will make everyone from beginner investors to
-                                    active traders happy.
-                                </p>
+                            <div class="top-line--data">
+                                <h6>Account Minimum</h6>
+                                <h4>$0</h4>
+                            </div>
+                            <div class="top-line--data">
+                                <h6>Promotion</h6>
+                                <h4>$100-$600</h4>
+                                <span>in cash bonus with a qualifying deposit</span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="review-text">
-                    <h3>Pros & Cons</h3>
-                    <h3>Full Review</h3>
-                    <p>
-                        Merrill Edge appeals to casual traders with a powerful combination of strong customer service
-                        and competitive pricing.
-                        The online broker integrates seamlessly with parent company Bank of America: Customers can
-                        access accounts at both with a single login, and Merrill Edge brokerage clients have access to
-                        investment advice at more than 2,100 Bank of America locations. Those who meet minimum balance
-                        requirements qualify for a limited number of commission-free trades each month.
-                    </p>
-                    <h4>Merrill Edge is best for: </h4>
-                    <ul>
-                        <li>Investors who value customer service</li>
-                        <li>Bank of America customers</li>
-                        <li>High-balance customers</li>
-                        <li>Penny stock traders</li>
-                    </ul>
-                    <h4>Merrill Edge at a glance: </h4>
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th scope="col">First</th>
-                                <th scope="col">Last</th>
-                                <th scope="col">Handle</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                            </tr>
-                            <tr>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                            </tr>
-                            <tr>
-                                <td>Larry</td>
-                                <td>the Bird</td>
-                                <td>@twitter</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </section>
-            <!-- /Review Content -->
-            <div class="sticky-sidebar">
-                <!-- Aside -->
-                <aside class="aside-faq">
-                    <h1 class="aside-title">Most Popular</h1>
-                    <div class="aside-content">
-                        <ul>
-                            <li><a href="">10 great ways to learn Stock Trading</a></li>
-                            <li><a href="">20 Must Read Investing Books</a></li>
-                            <li><a href="">How to Retire With At Least $1 Million Dollars</a></li>
-                            <li><a href="">10 Great Ways to Learn Stock Trading</a></li>
-                            <li><a href="">How I Trade (2018 Edition)</a></li>
-                        </ul>
-                    </div>
-                </aside>
-                <!-- /Aside -->
             </div>
+            <div class="review-text">
+                <h3>Pros & Cons</h3>
+                <ul>
+                    <li>Robust third-party research</li>
+                    <li>Ongoing promotions</li>
+                    <li>Integrated with Bank of America</li>
+                    <li>Robust third-party research</li>
+                    <li>Ongoing promotions</li>
+                    <li>Integrated with Bank of America</li>
+                </ul>
+                <h3>Full Review</h3>
+                <p>
+                    Merrill Edge appeals to casual traders with a powerful combination of strong customer service
+                    and competitive pricing.
+                    The online broker integrates seamlessly with parent company Bank of America: Customers can
+                    access accounts at both with a single login, and Merrill Edge brokerage clients have access to
+                    investment advice at more than 2,100 Bank of America locations. Those who meet minimum balance
+                    requirements qualify for a limited number of commission-free trades each month.
+                </p>
+                <h4>Merrill Edge is best for: </h4>
+                <ul>
+                    <li>Investors who value customer service</li>
+                    <li>Bank of America customers</li>
+                    <li>High-balance customers</li>
+                    <li>Penny stock traders</li>
+                </ul>
+                <h4>Merrill Edge at a glance: </h4>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Rating</th>
+                            <th>Comments</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="name">Overall</td>
+                            <td class="rating">4.9</td>
+                            <td class="comment">Winner of NerdWallet's award for best broker for research.</td>
+                        </tr>
+                        <tr>
+                            <td class="name">Account Minimum</td>
+                            <td class="rating">3.2</td>
+                            <td class="comment">$0</td>
+                        </tr>
+                        <tr>
+                            <td class="name">Stock Trading Costs</td>
+                            <td class="rating">4.0</td>
+                            <td class="comment">
+                                None, other than promotions detailed elsewhere in table.</td>
+                        </tr>
+                        <tr>
+                            <td class="name">Commision free ETFs</td>
+                            <td class="rating">4.0</td>
+                            <td class="comment">$6.95. Customers who maintain a three-month average combined
+                                balance of $50,000+ in Bank of America and Merrill Edge accounts can qualify for up
+                                to 30 commission-free trades per month (100 free trades with $100,000+).</td>
+                        </tr>
+                        <tr>
+                            <td class="name">Customer Support Options</td>
+                            <td class="rating">5.0</td>
+                            <td class="comment">Phone support 24/7; live chat and email support. Investors can meet
+                                with a Merrill Edge Financial Solutions Advisor at over 2,100 Bank of America
+                                locations.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <!-- /Review Content -->
+        <div class="sticky-sidebar">
+            <!-- Aside -->
+            <aside class="aside-table">
+                <h1 class="aside-title">Most Popular</h1>
+                <div class="aside-partners">
+                    <div class="partner">
+                        <img src="img/partners/1.png" alt="">
+                        <div class="partner-button">
+                            <div class="btn">Visit Site</div>
+                        </div>
+                    </div>
+                    <div class="partner">
+                        <img src="img/partners/2.png" alt="">
+                        <div class="partner-button">
+                            <div class="btn">Visit Site</div>
+                        </div>
+                    </div>
+                    <div class="partner">
+                        <img src="img/partners/3.png" alt="">
+                        <div class="partner-button">
+                            <div class="btn">Visit Site</div>
+                        </div>
+                    </div>
+                    <div class="partner">
+                        <img src="img/partners/4.png" alt="">
+                        <div class="partner-button">
+                            <div class="btn">Visit Site</div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+            <!-- /Aside -->
         </div>
-    </section>
-    <!-- /Review Page -->
-</main>
-<!-- /Main -->
+    </div>
+</section>
+<!-- /Review Page -->
 
-//= ./layouts/partials/footer.html
 //= ./layouts/bottom.html

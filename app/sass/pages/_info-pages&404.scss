@@ -1,25 +1,25 @@
 /*!
 =====================================================
-                =   Info Pages    =
+            =   Info Pages & 404   =
 =====================================================
 */
 
 .info-pages {
   margin: 35px 0 60px;
   .page-text {
-    color: $black;
+    padding: 30px 30px 60px;
     line-height: 20px;
     word-break: break-word;
-    padding: 30px 30px 60px;
     font-family: $default-font-light;
+    color: $black;
     background-color: $white;
     border-radius: $border-radius-5;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.12);
     h1 {
       margin-bottom: 15px;
+      line-height: 46px;
       text-align: center;
       font-size: 40px;
-      line-height: 46px;
       font-weight: normal;
       font-family: $default-font-bold;
     }
@@ -29,12 +29,10 @@
   }
   // 404 Page
   .error-404 {
-    color: $black;
     text-align: center;
-    font-family: $default-font-bold;
-    p {
-      font-size: 32px;
+    h1 {
       margin: 1.5em 0;
+      font-size: 32px;
       line-height: 1.5;
     }
   }
