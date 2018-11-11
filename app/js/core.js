@@ -1,11 +1,40 @@
 $(document).ready(function() {
+  $.ajax({
+    type: 'GET',
+    url: './js/data.json',
+    success: function(data) {
+      console.log(data);
+      console.log(data.data.today.rates);
+      var txt = JSON.stringify(data.data.today.rates);
+      // $('.currency-ticker').text(txt)
+      jQuery.each(data.results, function(i, val) {
+        // here you can do your magic
+        $('.currency-ticker').append(document.createTextNode(val.term));
+        $('.currency-ticker').append(document.createTextNode(val.count));
+      });
+    }
+  });
+
+
+  $('.currency').marquee({
+    //speed in milliseconds of the marquee
+    duration: 15000,
+    //gap in pixels between the tickers
+    gap: 50,
+    //time in milliseconds before the marquee will start animating
+    delayBeforeStart: 0,
+    //'left' or 'right'
+    direction: 'left',
+    //true or false - should the marquee be duplicated to show an effect of continues flow
+    duplicated: true,
+    pauseOnHover: true,
+    startVisible: true
+});
+
   // Hamburger
   $('.hamburger').click(navbarMenu);
-  $(document).on('click keydown', function(e) {
+  $(document).on('click', function(e) {
     if (e.target.className == 'navbar-overlay') {
-      navbarMenu();
-    }
-    if (e.keyCode == 27) {
       navbarMenu();
     }
   });
@@ -16,38 +45,18 @@ $(document).ready(function() {
       $('.header-navbar').toggleClass('open');
     }, 10);
   }
-  //  Filter
-  $('#filter').change(function() {
-    let selectedID = $(this)[0].selectedIndex;
-    let $selected = $(this).children(
-      'option:nth-child(' + (selectedID + 1) + ')'
-    );
-    let option = $selected.attr('value').replace('option-', '');
-    filterRowsBy(option);
+
+  // Filer Isotope
+  let $grid = $('.partners-table').isotope({
+    itemSelector: '.item',
+    layoutMode: 'fitRows'
   });
-  //  Filtering reviews
-  function filterRowsBy(options) {
-    $('.partners-table--item').each(function() {
-      if (options !== 'all' && options.length > 0) {
-        let reviewShow = false,
-          reviewCats = $(this)
-            .data('options')
-            .split(' ');
-        console.log(reviewCats);
-        // Display apposite elements
-        for (i = 0; i < reviewCats.length - 1; i++) {
-          if (options.indexOf(reviewCats[i]) != -1) {
-            $(this).show(0);
-            reviewShow = true;
-            break;
-          }
-        }
-        if (!reviewShow) $(this).hide(0);
-      } else {
-        $(this).show(0);
-      }
-    });
-  }
+  // Bind filter on select change
+  $('#filter').on('change', function() {
+    var filterValue = this.value;
+    $grid.isotope({ filter: filterValue });
+  });
+
   //  Rating Stars
   $('.stars li')
     .on('mouseover', function() {

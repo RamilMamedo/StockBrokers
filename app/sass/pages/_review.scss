@@ -11,9 +11,6 @@
       width: 100%;
     }
   }
-  .partners-table {
-    margin-bottom: 40px;
-  }
   .partners-table--item {
     padding: 0;
     @media (max-width: $breakpoint-lg) {
@@ -66,6 +63,7 @@
     }
   }
   .review-text {
+    margin-top: 40px;
     h3 {
       font-family: $default-font-bold;
       font-weight: normal;

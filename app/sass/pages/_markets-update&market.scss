@@ -16,31 +16,28 @@
   }
 }
 
-/*!
-=====================================================
-              =   Market Article    =
-=====================================================
-*/
-
 .market-article {
   margin-bottom: 30px;
   padding-bottom: 60px;
   border-bottom: 1px solid #dfdfdf;
   .article-title {
-    font-family: Helvetica;
-    font-size: 25px;
-    font-family: $default-font-bold;
-    font-weight: normal;
-    line-height: 30px;
-    text-transform: uppercase;
     margin-bottom: 5px;
+    a {
+      color: $black;
+      font-size: 25px;
+      font-family: $default-font-bold;
+      font-weight: normal;
+      line-height: 30px;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
   }
   .article-date {
-    font-family: $default-font-light;
-    font-size: 12px;
-    font-style: oblique;
-    line-height: 14px;
     margin-bottom: 25px;
+    line-height: 14px;
+    font-size: $ftz-extra-small;
+    font-style: oblique;
+    font-family: $default-font-light;
   }
   .article-picture {
     display: flex;
@@ -56,13 +53,11 @@
     }
     @media (max-width: $breakpoint-md) {
       width: 100%;
-      margin: 0;
-      margin-bottom: 20px;
+      margin: 0 0 20px;
     }
   }
   .article-preview {
     font-family: $default-font-light;
-
     p {
       line-height: 30px;
     }
@@ -101,39 +96,36 @@
   border-radius: $border-radius-5;
   box-shadow: 0 2px 4px 0 #d8d8d8;
   @media (max-width: $breakpoint-lg) {
-    margin-left: unset;
-    margin-top: 35px;
     width: 100%;
+    margin-left: unset;
   }
   .aside-title {
     margin: 0;
     padding: 12px;
-    color: #ffffff;
-    font-size: 18px;
-    font-family: $default-font-bold;
+    color: $white;
     font-weight: normal;
+    font-size: $ftz-large;
+    font-family: $default-font-bold;
     line-height: 22px;
     text-align: center;
     background-color: #82898d;
     border-top-right-radius: $border-radius-5;
     border-top-left-radius: $border-radius-5;
   }
-  .aside-content {
-    ul {
-      padding: 20px 0 60px;
-      li {
-        padding: 0 25px;
-        margin-bottom: 15px;
-        a {
-          text-decoration: none;
-          color: #389fd7;
-          font-size: 14px;
-          line-height: 17px;
-          opacity: 1;
-          transition: $transition;
-          &:hover {
-            opacity: 0.7;
-          }
+  ul {
+    padding: 20px 0 60px;
+    li {
+      padding: 0 25px;
+      margin-bottom: 15px;
+      a {
+        text-decoration: none;
+        color: #389fd7;
+        font-size: 14px;
+        line-height: 17px;
+        opacity: 1;
+        transition: $transition;
+        &:hover {
+          opacity: 0.7;
         }
       }
     }

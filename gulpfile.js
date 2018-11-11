@@ -58,7 +58,7 @@ gulp.task('clean', next => {
 //  Concatenation partials of HTML file like (Header, Footer) and Minifying-Beautifying them.
 gulp.task('html', () => {
   let options = {
-    "indent_size": 4,
+    "indent_size": 2,
     "indent_char": " ",
     "eol": "\n",
     "indent_level": 0,
@@ -178,7 +178,8 @@ Scripts = () => {
         './app/libs/jquery/jquery.min.js',
         './app/libs/resizeSensor.js',
         './app/libs/stickySidebar.js',
-        './app/libs/ticker.js',
+        './app/libs/marquee.js',
+        './app/libs/isotope.js',
         './dist/js/core.js',
       ])
       .pipe(concat('vendors.min.js'))

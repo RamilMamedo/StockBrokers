@@ -6,50 +6,55 @@
   <section class="filter-slider">
     <div class="filter-block">
       <span>Sort by</span>
-      <select name="filter" id="filter">
-        <option value="all">Rank</option>
-        <option value="compatibility">Compatibility</option>
-        <option value="matchmaking">Matchmaking</option>
-        <option value="photo">Photo Search</option>
-        <option value="mobile">Mobile App</option>
+      <select id="filter" name="filter">
+        <option value="*">Rank</option>
+        <option value=".fees">Fees</option>
+        <option value=".account-min">Account Minimum</option>
+        <option value=".promotion">Promotion</option>
       </select>
+      <svg
+        viewBox="0 0 16 9"
+        width="16"
+        height="8"
+      >
+        <path fill="none" stroke="#000" d="M14.74 1L7.454 8.285 0 1" />
+      </svg>
     </div>
-    <div class="currency-ticker" data-api="{% url 'exchange_rates' %}" data-base="EUR" data-symbols="USD,JPY,GBP,AUD,CAD,CHF,HKD,KRW">
-      <div class="ticker--body">
-        <div class="ticker--content">
-          <ul>
-
-          </ul>
-        </div>
-      </div>
+    <div class="currency">
+      <ul class="marquee" data-speed="0.25" data-pausable="true">
+        //= ./layouts/partials/currency.html
+        //= ./layouts/partials/currency.html
+        //= ./layouts/partials/currency.html
+      </ul>
     </div>
   </section>
   <!-- /Filter-Slider Block -->
   <!-- Index Partners Table -->
   <section class="partners-table">
-    <div class="partners-table--item">
+    <div class="partners-table--item item fees" data-options="fees">
       <div class="partner-media">
         <div class="partner-logo">
           <img src="img/partners/1.png" alt="logo" />
         </div>
         //= ./layouts/partials/stars.html
         <div class="partner-button">
-          <a class="btn" target="_blank" rel="noopener" data-goal-name="{{ item.name }}" href="#">Visit
-            Site</a>
+          <a
+            class="btn"
+            target="_blank"
+            rel="noopener"
+            data-goal-name="{{ item.name }}"
+            href="#"
+          >
+            Visit Site
+          </a>
         </div>
         <div class="icons">
+          <div class="icon"><img src="img/layers/clock.svg" alt="" /></div>
+          <div class="icon"><img src="img/layers/call.svg" alt="" /></div>
           <div class="icon">
-            <img src="img/layers/clock.svg" alt="">
+            <img src="img/layers/letter-active.svg" alt="" />
           </div>
-          <div class="icon">
-            <img src="img/layers/call.svg" alt="">
-          </div>
-          <div class="icon">
-            <img src="img/layers/letter-active.svg" alt="">
-          </div>
-          <div class="icon">
-            <img src="img/layers/message.svg" alt="">
-          </div>
+          <div class="icon"><img src="img/layers/message.svg" alt="" /></div>
         </div>
       </div>
       <div class="partner-info">
@@ -73,37 +78,39 @@
         <div class="bottom-line">
           <h6>The Bottom Line</h6>
           <p>
-            Merrill Edge offers high-quality customer service, robust research and low fees. Customers of parent
-            company Bank of America will love the seamless, thoughtful integration, with a single login to access
+            Merrill Edge offers high-quality customer service, robust research
+            and low fees. Customers of parent company Bank of America will love
+            the seamless, thoughtful integration, with a single login to access
             both accounts.
           </p>
           <a class="partner-link">Read Review</a>
         </div>
       </div>
     </div>
-    <div class="partners-table--item">
+    <div class="partners-table--item item fees promotion" data-options="fees">
       <div class="partner-media">
         <div class="partner-logo">
           <img src="img/partners/2.png" alt="logo" />
         </div>
         //= ./layouts/partials/stars.html
         <div class="partner-button">
-          <a class="btn" target="_blank" rel="noopener" data-goal-name="{{ item.name }}" href="#">Visit
-            Site</a>
+          <a
+            class="btn"
+            target="_blank"
+            rel="noopener"
+            data-goal-name="{{ item.name }}"
+            href="#"
+          >
+            Visit Site
+          </a>
         </div>
         <div class="icons">
+          <div class="icon"><img src="img/layers/clock.svg" alt="" /></div>
+          <div class="icon"><img src="img/layers/call.svg" alt="" /></div>
           <div class="icon">
-            <img src="img/layers/clock.svg" alt="">
+            <img src="img/layers/letter-active.svg" alt="" />
           </div>
-          <div class="icon">
-            <img src="img/layers/call.svg" alt="">
-          </div>
-          <div class="icon">
-            <img src="img/layers/letter-active.svg" alt="">
-          </div>
-          <div class="icon">
-            <img src="img/layers/message.svg" alt="">
-          </div>
+          <div class="icon"><img src="img/layers/message.svg" alt="" /></div>
         </div>
       </div>
       <div class="partner-info">
@@ -120,44 +127,48 @@
           <div class="top-line--data">
             <h6>Promotion</h6>
             <h4>60</h4>
-            <span>days of commission-free trades with a qualifying deposit</span>
+            <span>
+              days of commission-free trades with a qualifying deposit
+            </span>
           </div>
           <a href="" class="partner-link">Read Review</a>
         </div>
         <div class="bottom-line">
           <h6>The Bottom Line</h6>
           <p>
-            E-Trade has long been one of the most popular online brokers, largely because of its easy-to-use tools.
-            They offer a tiered commission structure that favors frequent traders but can add up to high costs for
-            casual investors.
+            E-Trade has long been one of the most popular online brokers,
+            largely because of its easy-to-use tools. They offer a tiered
+            commission structure that favors frequent traders but can add up to
+            high costs for casual investors.
           </p>
           <a class="partner-link" href="">Read Review</a>
         </div>
       </div>
     </div>
-    <div class="partners-table--item">
+    <div class="partners-table--item item account-min" data-options="promotion">
       <div class="partner-media">
         <div class="partner-logo">
           <img src="img/partners/3.png" alt="logo" />
         </div>
         //= ./layouts/partials/stars.html
         <div class="partner-button">
-          <a class="btn" target="_blank" rel="noopener" data-goal-name="{{ item.name }}" href="#">Visit
-            Site</a>
+          <a
+            class="btn"
+            target="_blank"
+            rel="noopener"
+            data-goal-name="{{ item.name }}"
+            href="#"
+          >
+            Visit Site
+          </a>
         </div>
         <div class="icons">
+          <div class="icon"><img src="img/layers/clock.svg" alt="" /></div>
+          <div class="icon"><img src="img/layers/call.svg" alt="" /></div>
           <div class="icon">
-            <img src="img/layers/clock.svg" alt="">
+            <img src="img/layers/letter-active.svg" alt="" />
           </div>
-          <div class="icon">
-            <img src="img/layers/call.svg" alt="">
-          </div>
-          <div class="icon">
-            <img src="img/layers/letter-active.svg" alt="">
-          </div>
-          <div class="icon">
-            <img src="img/layers/message.svg" alt="">
-          </div>
+          <div class="icon"><img src="img/layers/message.svg" alt="" /></div>
         </div>
       </div>
       <div class="partner-info">
@@ -181,36 +192,38 @@
         <div class="bottom-line">
           <h6>The Bottom Line</h6>
           <p>
-            TD Ameritrade makes up for higher-than-average trading commissions with better-than-average service,
-            research and trading tools that will make everyone from beginner investors to active traders happy.
+            TD Ameritrade makes up for higher-than-average trading commissions
+            with better-than-average service, research and trading tools that
+            will make everyone from beginner investors to active traders happy.
           </p>
           <a class="partner-link" href="">Read Review</a>
         </div>
       </div>
     </div>
-    <div class="partners-table--item">
+    <div class="partners-table--item item promotion" data-options="promotion">
       <div class="partner-media">
         <div class="partner-logo">
           <img src="img/partners/4.png" alt="logo" />
         </div>
         //= ./layouts/partials/stars.html
         <div class="partner-button">
-          <a class="btn" target="_blank" rel="noopener" data-goal-name="{{ item.name }}" href="#">Visit
-            Site</a>
+          <a
+            class="btn"
+            target="_blank"
+            rel="noopener"
+            data-goal-name="{{ item.name }}"
+            href="#"
+          >
+            Visit Site
+          </a>
         </div>
         <div class="icons">
+          <div class="icon"><img src="img/layers/clock.svg" alt="" /></div>
+          <div class="icon"><img src="img/layers/call.svg" alt="" /></div>
           <div class="icon">
-            <img src="img/layers/clock.svg" alt="">
+            <img src="img/layers/letter-active.svg" alt="" />
           </div>
-          <div class="icon">
-            <img src="img/layers/call.svg" alt="">
-          </div>
-          <div class="icon">
-            <img src="img/layers/letter-active.svg" alt="">
-          </div>
-          <div class="icon">
-            <img src="img/layers/message.svg" alt="">
-          </div>
+          <div class="icon"><img src="img/layers/message.svg" alt="" /></div>
         </div>
       </div>
       <div class="partner-info">
@@ -234,36 +247,38 @@
         <div class="bottom-line">
           <h6>The Bottom Line</h6>
           <p>
-            TD Ameritrade makes up for higher-than-average trading commissions with better-than-average service,
-            research and trading tools that will make everyone from beginner investors to active traders happy.
+            TD Ameritrade makes up for higher-than-average trading commissions
+            with better-than-average service, research and trading tools that
+            will make everyone from beginner investors to active traders happy.
           </p>
           <a href="" class="partner-link">Read Review</a>
         </div>
       </div>
     </div>
-    <div class="partners-table--item">
+    <div class="partners-table--item item promotion" data-options="account-min">
       <div class="partner-media">
         <div class="partner-logo">
           <img src="img/partners/5.png" alt="logo" />
         </div>
         //= ./layouts/partials/stars.html
         <div class="partner-button">
-          <a class="btn" target="_blank" rel="noopener" data-goal-name="{{ item.name }}" href="#">Visit
-            Site</a>
+          <a
+            class="btn"
+            target="_blank"
+            rel="noopener"
+            data-goal-name="{{ item.name }}"
+            href="#"
+          >
+            Visit Site
+          </a>
         </div>
         <div class="icons">
+          <div class="icon"><img src="img/layers/clock.svg" alt="" /></div>
+          <div class="icon"><img src="img/layers/call.svg" alt="" /></div>
           <div class="icon">
-            <img src="img/layers/clock.svg" alt="">
+            <img src="img/layers/letter-active.svg" alt="" />
           </div>
-          <div class="icon">
-            <img src="img/layers/call.svg" alt="">
-          </div>
-          <div class="icon">
-            <img src="img/layers/letter-active.svg" alt="">
-          </div>
-          <div class="icon">
-            <img src="img/layers/message.svg" alt="">
-          </div>
+          <div class="icon"><img src="img/layers/message.svg" alt="" /></div>
         </div>
       </div>
       <div class="partner-info">
@@ -287,8 +302,9 @@
         <div class="bottom-line">
           <h6>The Bottom Line</h6>
           <p>
-            TD Ameritrade makes up for higher-than-average trading commissions with better-than-average service,
-            research and trading tools that will make everyone from beginner investors to active traders happy.
+            TD Ameritrade makes up for higher-than-average trading commissions
+            with better-than-average service, research and trading tools that
+            will make everyone from beginner investors to active traders happy.
           </p>
           <a href="" class="partner-link">Read Review</a>
         </div>
@@ -300,15 +316,18 @@
   <section class="index-bottom-text">
     <h1>How to Pick the Best Online Stock Broker</h1>
     <p>
-      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
-      aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-      Nemo
-      enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos
-      qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
-      consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam
-      quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
-      nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse
-      quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+      doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
+      inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+      Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
+      fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem
+      sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit
+      amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora
+      incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad
+      minima veniam, quis nostrum exercitationem ullam corporis suscipit
+      laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum
+      iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae
+      consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
     </p>
   </section>
   <!-- /Index Bottom Text -->
@@ -317,54 +336,57 @@
     <h1>Tips For CHOOSING a Broker</h1>
     <div class="tip-item">
       <div class="tip-picture">
-        <img src="img/layers/commissions.svg" alt="Commissions">
+        <img src="img/layers/commissions.svg" alt="Commissions" />
       </div>
       <div class="tip-content">
         <h2>Trade Commissions</h2>
         <p>
-          You are completely free to buy and sell shares, bonds and other investments. This is usually cheap, which
-          is
-          an advantage. A disadvantage is that you have to do everything yourself and have some knowledge of stock
-          exchange.
+          You are completely free to buy and sell shares, bonds and other
+          investments. This is usually cheap, which is an advantage. A
+          disadvantage is that you have to do everything yourself and have some
+          knowledge of stock exchange.
         </p>
       </div>
     </div>
     <div class="tip-item">
       <div class="tip-picture">
-        <img src="img/layers/service.svg" alt="Service">
+        <img src="img/layers/service.svg" alt="Service" />
       </div>
       <div class="tip-content">
         <h2>Customer Service</h2>
         <p>
-          You do not buy separate shares but you participate in funds: baskets of shares within a theme. An advantage
-          is that you invest in such a spread, almost effortlessly. The extra fund management costs are a
+          You do not buy separate shares but you participate in funds: baskets
+          of shares within a theme. An advantage is that you invest in such a
+          spread, almost effortlessly. The extra fund management costs are a
           disadvantage.
         </p>
       </div>
     </div>
     <div class="tip-item">
       <div class="tip-picture">
-        <img src="img/layers/tools.svg" alt="Tools">
+        <img src="img/layers/tools.svg" alt="Tools" />
       </div>
       <div class="tip-content">
         <h2>Trading Tools</h2>
         <p>
-          You let someone else do the work, but you remain responsible. The investing is automated based on a
-          profile.
-          Usually you pay a percentage of the total investment value as compensation. Letting investing is accessible
-          to everyone.
+          You let someone else do the work, but you remain responsible. The
+          investing is automated based on a profile. Usually you pay a
+          percentage of the total investment value as compensation. Letting
+          investing is accessible to everyone.
         </p>
       </div>
     </div>
     <div class="tip-item">
       <div class="tip-picture">
-        <img src="img/layers/account.svg" alt="Account">
+        <img src="img/layers/account.svg" alt="Account" />
       </div>
       <div class="tip-content">
         <h2>Account Minimums</h2>
         <p>
-          You leave the investing entirely to a specialist. There is a strong entry threshold and the compensation is
-          high. With real serious capabilities and a fixed point of contact, we call this private banking .
+          You leave the investing entirely to a specialist. There is a strong
+          entry threshold and the compensation is high. With real serious
+          capabilities and a fixed point of contact, we call this private
+          banking .
         </p>
       </div>
     </div>

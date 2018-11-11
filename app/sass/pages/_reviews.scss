@@ -7,69 +7,63 @@
 .reviews {
   margin: 30px 0 110px;
   .partners-table--item {
-    align-items: center;
     padding: 17px 16px 17px 23px;
+    margin-bottom: 15px;
     @media (max-width: $breakpoint-lg) {
       padding: 20px;
     }
     @media (max-width: $breakpoint-md) {
       padding: 0;
-      flex-direction: column;
       text-align: center;
+      flex-direction: column;
+    }
+    .partner-logo {
+      @media (max-width: $breakpoint-lg) {
+        margin: 40px 0;
+      }
     }
     .partner-info {
-      width: unset !important;
       max-width: 550px;
-      font-size: $ftz-small;
-      color: $black;
-      line-height: 17px;
       margin: 0 auto 0 20px;
+      line-height: 17px;
+      font-size: $ftz-small;
       @media (max-width: $breakpoint-lg) {
         margin-right: 20px;
       }
       @media (max-width: $breakpoint-md) {
-        margin: 15px 0 0;
+        order: 3;
         max-width: unset;
-        text-align: center;
-        order: 3;
-        border-top-right-radius: 5px;
-        border-bottom-right-radius: 5px;
-      }
-      @media (max-width: $breakpoint-sm) {
         margin: 15px 0 0;
-        max-height: unset;
         text-align: center;
-        order: 3;
       }
       p {
-        font-family: $default-font-light;
         margin-bottom: 20px;
+        font-family: $default-font-light;
         @media (max-width: $breakpoint-lg) {
           height: 50px;
           overflow: hidden;
         }
         @media (max-width: $breakpoint-md) {
           height: unset;
-          font-size: 14px;
+          padding: 0 30px;
           line-height: 17px;
-          padding: 0 20px;
+          font-size: $ftz-small;
         }
       }
       h6 {
-        font-size: 18px;
-        font-family: $default-font-bold;
-        font-weight: normal;
-        line-height: 22px;
-        margin-bottom: 14px;
         width: 100%;
+        margin-bottom: 14px;
+        line-height: 22px;
+        font-size: $ftz-large;
+        font-weight: normal;
+        font-family: $default-font-bold;
         @media (max-width: $breakpoint-md) {
-          font-size: $ftz-small;
-          line-height: 17px;
           margin-bottom: 1em;
+          line-height: 17px;
+          font-size: $ftz-small;
         }
       }
       .partner-link {
-        margin: 0;
         text-align: left;
         color: $blue;
         font-family: $default-font-bold;
@@ -78,8 +72,8 @@
         text-decoration: none;
         text-transform: uppercase;
         @media (max-width: $breakpoint-md) {
-          text-align: center;
           width: 100%;
+          text-align: center;
           margin-bottom: 15px;
         }
       }
@@ -89,17 +83,12 @@
         order: 2;
       }
       .btn {
-        font-weight: $fw-500;
         padding: 12px 35px;
+        font-weight: $fw-500;
         @media (max-width: $breakpoint-md) {
           padding: 12px 75px;
         }
       }
-    }
-  }
-  .partner-logo {
-    @media (max-width: $breakpoint-lg) {
-      margin: 40px 0;
     }
   }
 }

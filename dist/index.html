@@ -2,573 +2,621 @@
 <html lang="en" dir="ltr">
 
 <head>
-    <meta charset="utf-8">
-    <title>StockBrokers</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
-    <!-- Style Sheets -->
-    <link rel="stylesheet" href="css/main.min.css" type="text/css">
+  <meta charset="utf-8">
+  <title>StockBrokers</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+  <!-- Style Sheets -->
+  <link rel="stylesheet" href="css/main.min.css" type="text/css">
 </head>
 
 <body>
-    <section class="background-banner" role="banner">
-        <!-- Header -->
-        <header class="header">
-            <div class="container">
-                <div class="header--wrapper">
-                    <div class="header-brand">
-                        <a class="header-logo" href="/" style="text-decoration: none; color: #fff;font-family:'Kohinoor Bangla';font-size: 24px;font-weight: bold;letter-spacing: -1.09px;line-height: 35px;">
-                            Stockbrokers
-                            <!-- <img src="img/logo.png" alt="{{ menu.home.title|striptags }}" /> -->
-                        </a>
-                    </div>
-                    <div class="header-navbar">
-                        <div class="hamburger" role="button">
-                            <span class="hamburger--inner"></span>
-                        </div>
-                        <div class="navbar-overlay"></div>
-                        <nav>
-                            <ul>
-                                <li>
-                                    <a class="header-logo" href="/" style="text-decoration: none; color: #fff;font-family:'Kohinoor Bangla';font-size: 24px;font-weight: bold;letter-spacing: -1.09px;line-height: 35px;">
-                                        Stockbrokers
-                                        <!-- <img src="img/logo.png" alt="{{ menu.home.title|striptags }}" /> -->
-                                    </a>
-                                </li>
-                                <li class="active"><a href="/">Home</a></li>
-                                <li class=""><a href="markets-update.html">Market Updates</a></li>
-                                <li class=""><a href="reviews.html">Reviews</a></li>
-                                <li class=""><a href="info-pages.html">About Us</a></li>
-                                <li class=""><a href="/">Contact Us</a></li>
-                                <li class=""><a href="/">Terms & Conditions</a></li>
-                                <li class=""><a href="/">Privacy Policy</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
+  <section class="background-banner" role="banner">
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="header--wrapper">
+          <div class="header-brand">
+            <a class="header-logo" href="/" style="text-decoration: none; color: #fff;font-family:'Kohinoor Bangla';font-size: 24px;font-weight: bold;letter-spacing: -1.09px;line-height: 35px;">
+              Stockbrokers
+              <!-- <img src="img/logo.png" alt="{{ menu.home.title|striptags }}" /> -->
+            </a>
+          </div>
+          <div class="header-navbar">
+            <div class="hamburger" role="button">
+              <span class="hamburger--inner"></span>
             </div>
-        </header>
-        <!-- /Header -->
-        <!-- Page Title -->
-        <section class="page-title">
-            <div class="container">
-                <h1>Best Online Stock Brokers</h1>
-                <p>
-                    We've compared the best regulated Online Stock Brokers in USA. Benefit from award-winning technology
-                    and
-                    their expert support. Get registered today and see what type of investment suits you best.
-                </p>
-            </div>
-        </section>
-        <!-- /Page Title -->
-    </section>
-    <!-- Main -->
-    <main class="container">
-
-        <!-- Index -->
-        <section class="index">
-            <!-- Filter-Slider Block -->
-            <section class="filter-slider">
-                <div class="filter-block">
-                    <span>Sort by</span>
-                    <select name="filter" id="filter">
-                        <option value="all">Rank</option>
-                        <option value="compatibility">Compatibility</option>
-                        <option value="matchmaking">Matchmaking</option>
-                        <option value="photo">Photo Search</option>
-                        <option value="mobile">Mobile App</option>
-                    </select>
-                </div>
-                <div class="currency-ticker" data-api="{% url 'exchange_rates' %}" data-base="EUR" data-symbols="USD,JPY,GBP,AUD,CAD,CHF,HKD,KRW">
-                    <div class="ticker--body">
-                        <div class="ticker--content">
-                            <ul>
-
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- /Filter-Slider Block -->
-            <!-- Index Partners Table -->
-            <section class="partners-table">
-                <div class="partners-table--item">
-                    <div class="partner-media">
-                        <div class="partner-logo">
-                            <img src="img/partners/1.png" alt="logo" />
-                        </div>
-                        <div class='rating-stars'>
-                            <ul class='stars'>
-                                <li class='star selected' data-value='1'>
-                                    <i></i>
-                                </li>
-                                <li class='star selected' data-value='2'>
-                                    <i></i>
-                                </li>
-                                <li class='star selected' data-value='3'>
-                                    <i></i>
-                                </li>
-                                <li class='star' data-value='4'>
-                                    <i></i>
-                                </li>
-                                <li class='star' data-value='5'>
-                                    <i></i>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="partner-button">
-                            <a class="btn" target="_blank" rel="noopener" data-goal-name="{{ item.name }}" href="#">Visit
-                                Site</a>
-                        </div>
-                        <div class="icons">
-                            <div class="icon">
-                                <img src="img/layers/clock.svg" alt="">
-                            </div>
-                            <div class="icon">
-                                <img src="img/layers/call.svg" alt="">
-                            </div>
-                            <div class="icon">
-                                <img src="img/layers/letter-active.svg" alt="">
-                            </div>
-                            <div class="icon">
-                                <img src="img/layers/message.svg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="partner-info">
-                        <div class="top-line">
-                            <div class="top-line--data">
-                                <h6>Fees</h6>
-                                <h4>$6.95</h4>
-                                <span>per trade</span>
-                            </div>
-                            <div class="top-line--data">
-                                <h6>Account Minimum</h6>
-                                <h4>$0</h4>
-                            </div>
-                            <div class="top-line--data">
-                                <h6>Promotion</h6>
-                                <h4>$100-$600</h4>
-                                <span>in cash bonus with a qualifying deposit</span>
-                            </div>
-                            <a href="" class="partner-link">Read Review</a>
-                        </div>
-                        <div class="bottom-line">
-                            <h6>The Bottom Line</h6>
-                            <p>
-                                Merrill Edge offers high-quality customer service, robust research and low fees. Customers of parent
-                                company Bank of America will love the seamless, thoughtful integration, with a single login to access
-                                both accounts.
-                            </p>
-                            <a class="partner-link">Read Review</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="partners-table--item">
-                    <div class="partner-media">
-                        <div class="partner-logo">
-                            <img src="img/partners/2.png" alt="logo" />
-                        </div>
-                        <div class='rating-stars'>
-                            <ul class='stars'>
-                                <li class='star selected' data-value='1'>
-                                    <i></i>
-                                </li>
-                                <li class='star selected' data-value='2'>
-                                    <i></i>
-                                </li>
-                                <li class='star selected' data-value='3'>
-                                    <i></i>
-                                </li>
-                                <li class='star' data-value='4'>
-                                    <i></i>
-                                </li>
-                                <li class='star' data-value='5'>
-                                    <i></i>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="partner-button">
-                            <a class="btn" target="_blank" rel="noopener" data-goal-name="{{ item.name }}" href="#">Visit
-                                Site</a>
-                        </div>
-                        <div class="icons">
-                            <div class="icon">
-                                <img src="img/layers/clock.svg" alt="">
-                            </div>
-                            <div class="icon">
-                                <img src="img/layers/call.svg" alt="">
-                            </div>
-                            <div class="icon">
-                                <img src="img/layers/letter-active.svg" alt="">
-                            </div>
-                            <div class="icon">
-                                <img src="img/layers/message.svg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="partner-info">
-                        <div class="top-line">
-                            <div class="top-line--data">
-                                <h6>Fees</h6>
-                                <h4>$6.95</h4>
-                                <span>per trade</span>
-                            </div>
-                            <div class="top-line--data">
-                                <h6>Account Minimum</h6>
-                                <h4>$500</h4>
-                            </div>
-                            <div class="top-line--data">
-                                <h6>Promotion</h6>
-                                <h4>60</h4>
-                                <span>days of commission-free trades with a qualifying deposit</span>
-                            </div>
-                            <a href="" class="partner-link">Read Review</a>
-                        </div>
-                        <div class="bottom-line">
-                            <h6>The Bottom Line</h6>
-                            <p>
-                                E-Trade has long been one of the most popular online brokers, largely because of its easy-to-use tools.
-                                They offer a tiered commission structure that favors frequent traders but can add up to high costs for
-                                casual investors.
-                            </p>
-                            <a class="partner-link" href="">Read Review</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="partners-table--item">
-                    <div class="partner-media">
-                        <div class="partner-logo">
-                            <img src="img/partners/3.png" alt="logo" />
-                        </div>
-                        <div class='rating-stars'>
-                            <ul class='stars'>
-                                <li class='star selected' data-value='1'>
-                                    <i></i>
-                                </li>
-                                <li class='star selected' data-value='2'>
-                                    <i></i>
-                                </li>
-                                <li class='star selected' data-value='3'>
-                                    <i></i>
-                                </li>
-                                <li class='star' data-value='4'>
-                                    <i></i>
-                                </li>
-                                <li class='star' data-value='5'>
-                                    <i></i>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="partner-button">
-                            <a class="btn" target="_blank" rel="noopener" data-goal-name="{{ item.name }}" href="#">Visit
-                                Site</a>
-                        </div>
-                        <div class="icons">
-                            <div class="icon">
-                                <img src="img/layers/clock.svg" alt="">
-                            </div>
-                            <div class="icon">
-                                <img src="img/layers/call.svg" alt="">
-                            </div>
-                            <div class="icon">
-                                <img src="img/layers/letter-active.svg" alt="">
-                            </div>
-                            <div class="icon">
-                                <img src="img/layers/message.svg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="partner-info">
-                        <div class="top-line">
-                            <div class="top-line--data">
-                                <h6>Fees</h6>
-                                <h4>$6.95</h4>
-                                <span>per trade</span>
-                            </div>
-                            <div class="top-line--data">
-                                <h6>Account Minimum</h6>
-                                <h4>$0</h4>
-                            </div>
-                            <div class="top-line--data">
-                                <h6>Promotion</h6>
-                                <h4>$100-$600</h4>
-                                <span>in cash bonus with a qualifying deposit</span>
-                            </div>
-                            <a href="" class="partner-link">Read Review</a>
-                        </div>
-                        <div class="bottom-line">
-                            <h6>The Bottom Line</h6>
-                            <p>
-                                TD Ameritrade makes up for higher-than-average trading commissions with better-than-average service,
-                                research and trading tools that will make everyone from beginner investors to active traders happy.
-                            </p>
-                            <a class="partner-link" href="">Read Review</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="partners-table--item">
-                    <div class="partner-media">
-                        <div class="partner-logo">
-                            <img src="img/partners/4.png" alt="logo" />
-                        </div>
-                        <div class='rating-stars'>
-                            <ul class='stars'>
-                                <li class='star selected' data-value='1'>
-                                    <i></i>
-                                </li>
-                                <li class='star selected' data-value='2'>
-                                    <i></i>
-                                </li>
-                                <li class='star selected' data-value='3'>
-                                    <i></i>
-                                </li>
-                                <li class='star' data-value='4'>
-                                    <i></i>
-                                </li>
-                                <li class='star' data-value='5'>
-                                    <i></i>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="partner-button">
-                            <a class="btn" target="_blank" rel="noopener" data-goal-name="{{ item.name }}" href="#">Visit
-                                Site</a>
-                        </div>
-                        <div class="icons">
-                            <div class="icon">
-                                <img src="img/layers/clock.svg" alt="">
-                            </div>
-                            <div class="icon">
-                                <img src="img/layers/call.svg" alt="">
-                            </div>
-                            <div class="icon">
-                                <img src="img/layers/letter-active.svg" alt="">
-                            </div>
-                            <div class="icon">
-                                <img src="img/layers/message.svg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="partner-info">
-                        <div class="top-line">
-                            <div class="top-line--data">
-                                <h6>Fees</h6>
-                                <h4>$6.95</h4>
-                                <span>per trade</span>
-                            </div>
-                            <div class="top-line--data">
-                                <h6>Account Minimum</h6>
-                                <h4>$0</h4>
-                            </div>
-                            <div class="top-line--data">
-                                <h6>Promotion</h6>
-                                <h4>$100-$600</h4>
-                                <span>in cash bonus with a qualifying deposit</span>
-                            </div>
-                            <a href="" class="partner-link">Read Review</a>
-                        </div>
-                        <div class="bottom-line">
-                            <h6>The Bottom Line</h6>
-                            <p>
-                                TD Ameritrade makes up for higher-than-average trading commissions with better-than-average service,
-                                research and trading tools that will make everyone from beginner investors to active traders happy.
-                            </p>
-                            <a href="" class="partner-link">Read Review</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="partners-table--item">
-                    <div class="partner-media">
-                        <div class="partner-logo">
-                            <img src="img/partners/5.png" alt="logo" />
-                        </div>
-                        <div class='rating-stars'>
-                            <ul class='stars'>
-                                <li class='star selected' data-value='1'>
-                                    <i></i>
-                                </li>
-                                <li class='star selected' data-value='2'>
-                                    <i></i>
-                                </li>
-                                <li class='star selected' data-value='3'>
-                                    <i></i>
-                                </li>
-                                <li class='star' data-value='4'>
-                                    <i></i>
-                                </li>
-                                <li class='star' data-value='5'>
-                                    <i></i>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="partner-button">
-                            <a class="btn" target="_blank" rel="noopener" data-goal-name="{{ item.name }}" href="#">Visit
-                                Site</a>
-                        </div>
-                        <div class="icons">
-                            <div class="icon">
-                                <img src="img/layers/clock.svg" alt="">
-                            </div>
-                            <div class="icon">
-                                <img src="img/layers/call.svg" alt="">
-                            </div>
-                            <div class="icon">
-                                <img src="img/layers/letter-active.svg" alt="">
-                            </div>
-                            <div class="icon">
-                                <img src="img/layers/message.svg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="partner-info">
-                        <div class="top-line">
-                            <div class="top-line--data">
-                                <h6>Fees</h6>
-                                <h4>$6.95</h4>
-                                <span>per trade</span>
-                            </div>
-                            <div class="top-line--data">
-                                <h6>Account Minimum</h6>
-                                <h4>$0</h4>
-                            </div>
-                            <div class="top-line--data">
-                                <h6>Promotion</h6>
-                                <h4>$100-$600</h4>
-                                <span>in cash bonus with a qualifying deposit</span>
-                            </div>
-                            <a href="" class="partner-link">Read Review</a>
-                        </div>
-                        <div class="bottom-line">
-                            <h6>The Bottom Line</h6>
-                            <p>
-                                TD Ameritrade makes up for higher-than-average trading commissions with better-than-average service,
-                                research and trading tools that will make everyone from beginner investors to active traders happy.
-                            </p>
-                            <a href="" class="partner-link">Read Review</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- /Index Partners Table -->
-            <!-- Index Bottom Text -->
-            <section class="index-bottom-text">
-                <h1>How to Pick the Best Online Stock Broker</h1>
-                <p>
-                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
-                    aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-                    Nemo
-                    enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos
-                    qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
-                    consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam
-                    quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
-                    nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse
-                    quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
-                </p>
-            </section>
-            <!-- /Index Bottom Text -->
-            <!-- Index Tips -->
-            <section class="tips">
-                <h1>Tips For CHOOSING a Broker</h1>
-                <div class="tip-item">
-                    <div class="tip-picture">
-                        <img src="img/layers/commissions.svg" alt="Commissions">
-                    </div>
-                    <div class="tip-content">
-                        <h2>Trade Commissions</h2>
-                        <p>
-                            You are completely free to buy and sell shares, bonds and other investments. This is usually cheap, which
-                            is
-                            an advantage. A disadvantage is that you have to do everything yourself and have some knowledge of stock
-                            exchange.
-                        </p>
-                    </div>
-                </div>
-                <div class="tip-item">
-                    <div class="tip-picture">
-                        <img src="img/layers/service.svg" alt="Service">
-                    </div>
-                    <div class="tip-content">
-                        <h2>Customer Service</h2>
-                        <p>
-                            You do not buy separate shares but you participate in funds: baskets of shares within a theme. An advantage
-                            is that you invest in such a spread, almost effortlessly. The extra fund management costs are a
-                            disadvantage.
-                        </p>
-                    </div>
-                </div>
-                <div class="tip-item">
-                    <div class="tip-picture">
-                        <img src="img/layers/tools.svg" alt="Tools">
-                    </div>
-                    <div class="tip-content">
-                        <h2>Trading Tools</h2>
-                        <p>
-                            You let someone else do the work, but you remain responsible. The investing is automated based on a
-                            profile.
-                            Usually you pay a percentage of the total investment value as compensation. Letting investing is accessible
-                            to everyone.
-                        </p>
-                    </div>
-                </div>
-                <div class="tip-item">
-                    <div class="tip-picture">
-                        <img src="img/layers/account.svg" alt="Account">
-                    </div>
-                    <div class="tip-content">
-                        <h2>Account Minimums</h2>
-                        <p>
-                            You leave the investing entirely to a specialist. There is a strong entry threshold and the compensation is
-                            high. With real serious capabilities and a fixed point of contact, we call this private banking .
-                        </p>
-                    </div>
-                </div>
-            </section>
-            <!-- /Index Tips -->
-        </section>
-        <!-- /Index -->
-
-    </main>
-    <!-- /Main -->
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-wrapper">
-                <nav class="footer-nav">
-                    <div class="sections">
-                        <h3>Sections</h3>
-                        <ul>
-                            <li><a href="/">Home</a></li>
-                            <li><a href="/">Reviews</a></li>
-                            <li><a href="/">Market Updates</a></li>
-                            <li><a href="/">About Us</a></li>
-                        </ul>
-                    </div>
-                    <div class="legal">
-                        <h3>Legal</h3>
-                        <ul>
-                            <li><a href="/">Privacy Policy</a></li>
-                            <li><a href="/">Terms & Conditions</a></li>
-                            <li><a href="/">Contact Us</a></li>
-                        </ul>
-                    </div>
-                </nav>
-                <div class="footer-brand">
-                    <div class="brand">
-                        <a class="nav-logo" href="/" style="text-decoration: none; color: #fff;font-family:'Kohinoor Bangla';font-size: 24px;font-weight: bold;letter-spacing: -1.09px;line-height: 35px;">
-                            Stockbrokers
-                            <!-- <img src="img/logo.png" alt="{{ menu.home.title|striptags }}" /> -->
-                        </a>
-                    </div>
-                    <div class="copyright">All Rights Reserved © 2018</div>
-                </div>
-            </div>
+            <div class="navbar-overlay"></div>
+            <nav>
+              <ul>
+                <li>
+                  <a class="header-logo" href="/" style="text-decoration: none; color: #fff;font-family:'Kohinoor Bangla';font-size: 24px;font-weight: bold;letter-spacing: -1.09px;line-height: 35px;">
+                    Stockbrokers
+                    <!-- <img src="img/logo.png" alt="{{ menu.home.title|striptags }}" /> -->
+                  </a>
+                </li>
+                <li class="active"><a href="/">Home</a></li>
+                <li class=""><a href="markets-update.html">Market Updates</a></li>
+                <li class=""><a href="reviews.html">Reviews</a></li>
+                <li class=""><a href="info-pages.html">About Us</a></li>
+                <li class=""><a href="/">Contact Us</a></li>
+                <li class=""><a href="/">Terms & Conditions</a></li>
+                <li class=""><a href="/">Privacy Policy</a></li>
+              </ul>
+            </nav>
+          </div>
         </div>
-    </footer>
-    <!-- /Footer -->
-    <!-- JavaScript Files -->
-    <script type="text/javascript" src="js/vendors.min.js"></script>
+      </div>
+    </header>
+    <!-- /Header -->
+    <!-- Page Title -->
+    <section class="page-title">
+      <div class="container">
+        <h1>Best Online Stock Brokers</h1>
+        <p>
+          We've compared the best regulated Online Stock Brokers in USA. Benefit from award-winning technology
+          and
+          their expert support. Get registered today and see what type of investment suits you best.
+        </p>
+      </div>
+    </section>
+    <!-- /Page Title -->
+  </section>
+  <!-- Main -->
+  <main class="container">
+
+    <!-- Index -->
+    <section class="index">
+      <!-- Filter-Slider Block -->
+      <section class="filter-slider">
+        <div class="filter-block">
+          <span>Sort by</span>
+          <select id="filter" name="filter">
+            <option value="*">Rank</option>
+            <option value=".fees">Fees</option>
+            <option value=".account-min">Account Minimum</option>
+            <option value=".promotion">Promotion</option>
+          </select>
+          <svg viewBox="0 0 16 9" width="16" height="8">
+            <path fill="none" stroke="#000" d="M14.74 1L7.454 8.285 0 1" />
+          </svg>
+        </div>
+        <div class="currency">
+          <ul class="marquee" data-speed="0.25" data-pausable="true">
+            <li>
+              <span class="currency-name">Euro</span>
+              <span class="currency-value">0.88203</span>
+              <span class="currency-icon"><img src="img/layers/triangle.svg" alt="" /></span>
+              <span class="currency-difference">+ 0.01120</span>
+              <span class="currency-percent">+ 0.86%</span>
+            </li>
+            <li>
+              <span class="currency-name">GBP</span>
+              <span class="currency-value">0.770535</span>
+              <span class="currency-icon"><img src="img/layers/triangle-passive.svg" alt="" /></span>
+              <span class="currency-difference passive">- 0.00420</span>
+              <span class="currency-percent passive">- 0.56%</span>
+            </li>
+            <li>
+              <span class="currency-name">Euro</span>
+              <span class="currency-value">0.88203</span>
+              <span class="currency-icon"><img src="img/layers/triangle.svg" alt="" /></span>
+              <span class="currency-difference">+ 0.01120</span>
+              <span class="currency-percent">+ 0.86%</span>
+            </li>
+            <li>
+              <span class="currency-name">Euro</span>
+              <span class="currency-value">0.88203</span>
+              <span class="currency-icon"><img src="img/layers/triangle.svg" alt="" /></span>
+              <span class="currency-difference">+ 0.01120</span>
+              <span class="currency-percent">+ 0.86%</span>
+            </li>
+            <li>
+              <span class="currency-name">GBP</span>
+              <span class="currency-value">0.770535</span>
+              <span class="currency-icon"><img src="img/layers/triangle-passive.svg" alt="" /></span>
+              <span class="currency-difference passive">- 0.00420</span>
+              <span class="currency-percent passive">- 0.56%</span>
+            </li>
+            <li>
+              <span class="currency-name">Euro</span>
+              <span class="currency-value">0.88203</span>
+              <span class="currency-icon"><img src="img/layers/triangle.svg" alt="" /></span>
+              <span class="currency-difference">+ 0.01120</span>
+              <span class="currency-percent">+ 0.86%</span>
+            </li>
+            <li>
+              <span class="currency-name">Euro</span>
+              <span class="currency-value">0.88203</span>
+              <span class="currency-icon"><img src="img/layers/triangle.svg" alt="" /></span>
+              <span class="currency-difference">+ 0.01120</span>
+              <span class="currency-percent">+ 0.86%</span>
+            </li>
+            <li>
+              <span class="currency-name">GBP</span>
+              <span class="currency-value">0.770535</span>
+              <span class="currency-icon"><img src="img/layers/triangle-passive.svg" alt="" /></span>
+              <span class="currency-difference passive">- 0.00420</span>
+              <span class="currency-percent passive">- 0.56%</span>
+            </li>
+            <li>
+              <span class="currency-name">Euro</span>
+              <span class="currency-value">0.88203</span>
+              <span class="currency-icon"><img src="img/layers/triangle.svg" alt="" /></span>
+              <span class="currency-difference">+ 0.01120</span>
+              <span class="currency-percent">+ 0.86%</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- /Filter-Slider Block -->
+      <!-- Index Partners Table -->
+      <section class="partners-table">
+        <div class="partners-table--item item fees" data-options="fees">
+          <div class="partner-media">
+            <div class="partner-logo">
+              <img src="img/partners/1.png" alt="logo" />
+            </div>
+            <div class='rating-stars'>
+              <ul class='stars'>
+                <li class='star selected' data-value='1'>
+                  <i></i>
+                </li>
+                <li class='star selected' data-value='2'>
+                  <i></i>
+                </li>
+                <li class='star selected' data-value='3'>
+                  <i></i>
+                </li>
+                <li class='star' data-value='4'>
+                  <i></i>
+                </li>
+                <li class='star' data-value='5'>
+                  <i></i>
+                </li>
+              </ul>
+            </div>
+            <div class="partner-button">
+              <a class="btn" target="_blank" rel="noopener" data-goal-name="{{ item.name }}" href="#">
+                Visit Site
+              </a>
+            </div>
+            <div class="icons">
+              <div class="icon"><img src="img/layers/clock.svg" alt="" /></div>
+              <div class="icon"><img src="img/layers/call.svg" alt="" /></div>
+              <div class="icon">
+                <img src="img/layers/letter-active.svg" alt="" />
+              </div>
+              <div class="icon"><img src="img/layers/message.svg" alt="" /></div>
+            </div>
+          </div>
+          <div class="partner-info">
+            <div class="top-line">
+              <div class="top-line--data">
+                <h6>Fees</h6>
+                <h4>$6.95</h4>
+                <span>per trade</span>
+              </div>
+              <div class="top-line--data">
+                <h6>Account Minimum</h6>
+                <h4>$0</h4>
+              </div>
+              <div class="top-line--data">
+                <h6>Promotion</h6>
+                <h4>$100-$600</h4>
+                <span>in cash bonus with a qualifying deposit</span>
+              </div>
+              <a href="" class="partner-link">Read Review</a>
+            </div>
+            <div class="bottom-line">
+              <h6>The Bottom Line</h6>
+              <p>
+                Merrill Edge offers high-quality customer service, robust research
+                and low fees. Customers of parent company Bank of America will love
+                the seamless, thoughtful integration, with a single login to access
+                both accounts.
+              </p>
+              <a class="partner-link">Read Review</a>
+            </div>
+          </div>
+        </div>
+        <div class="partners-table--item item fees promotion" data-options="fees">
+          <div class="partner-media">
+            <div class="partner-logo">
+              <img src="img/partners/2.png" alt="logo" />
+            </div>
+            <div class='rating-stars'>
+              <ul class='stars'>
+                <li class='star selected' data-value='1'>
+                  <i></i>
+                </li>
+                <li class='star selected' data-value='2'>
+                  <i></i>
+                </li>
+                <li class='star selected' data-value='3'>
+                  <i></i>
+                </li>
+                <li class='star' data-value='4'>
+                  <i></i>
+                </li>
+                <li class='star' data-value='5'>
+                  <i></i>
+                </li>
+              </ul>
+            </div>
+            <div class="partner-button">
+              <a class="btn" target="_blank" rel="noopener" data-goal-name="{{ item.name }}" href="#">
+                Visit Site
+              </a>
+            </div>
+            <div class="icons">
+              <div class="icon"><img src="img/layers/clock.svg" alt="" /></div>
+              <div class="icon"><img src="img/layers/call.svg" alt="" /></div>
+              <div class="icon">
+                <img src="img/layers/letter-active.svg" alt="" />
+              </div>
+              <div class="icon"><img src="img/layers/message.svg" alt="" /></div>
+            </div>
+          </div>
+          <div class="partner-info">
+            <div class="top-line">
+              <div class="top-line--data">
+                <h6>Fees</h6>
+                <h4>$6.95</h4>
+                <span>per trade</span>
+              </div>
+              <div class="top-line--data">
+                <h6>Account Minimum</h6>
+                <h4>$500</h4>
+              </div>
+              <div class="top-line--data">
+                <h6>Promotion</h6>
+                <h4>60</h4>
+                <span>
+                  days of commission-free trades with a qualifying deposit
+                </span>
+              </div>
+              <a href="" class="partner-link">Read Review</a>
+            </div>
+            <div class="bottom-line">
+              <h6>The Bottom Line</h6>
+              <p>
+                E-Trade has long been one of the most popular online brokers,
+                largely because of its easy-to-use tools. They offer a tiered
+                commission structure that favors frequent traders but can add up to
+                high costs for casual investors.
+              </p>
+              <a class="partner-link" href="">Read Review</a>
+            </div>
+          </div>
+        </div>
+        <div class="partners-table--item item account-min" data-options="promotion">
+          <div class="partner-media">
+            <div class="partner-logo">
+              <img src="img/partners/3.png" alt="logo" />
+            </div>
+            <div class='rating-stars'>
+              <ul class='stars'>
+                <li class='star selected' data-value='1'>
+                  <i></i>
+                </li>
+                <li class='star selected' data-value='2'>
+                  <i></i>
+                </li>
+                <li class='star selected' data-value='3'>
+                  <i></i>
+                </li>
+                <li class='star' data-value='4'>
+                  <i></i>
+                </li>
+                <li class='star' data-value='5'>
+                  <i></i>
+                </li>
+              </ul>
+            </div>
+            <div class="partner-button">
+              <a class="btn" target="_blank" rel="noopener" data-goal-name="{{ item.name }}" href="#">
+                Visit Site
+              </a>
+            </div>
+            <div class="icons">
+              <div class="icon"><img src="img/layers/clock.svg" alt="" /></div>
+              <div class="icon"><img src="img/layers/call.svg" alt="" /></div>
+              <div class="icon">
+                <img src="img/layers/letter-active.svg" alt="" />
+              </div>
+              <div class="icon"><img src="img/layers/message.svg" alt="" /></div>
+            </div>
+          </div>
+          <div class="partner-info">
+            <div class="top-line">
+              <div class="top-line--data">
+                <h6>Fees</h6>
+                <h4>$6.95</h4>
+                <span>per trade</span>
+              </div>
+              <div class="top-line--data">
+                <h6>Account Minimum</h6>
+                <h4>$0</h4>
+              </div>
+              <div class="top-line--data">
+                <h6>Promotion</h6>
+                <h4>$100-$600</h4>
+                <span>in cash bonus with a qualifying deposit</span>
+              </div>
+              <a href="" class="partner-link">Read Review</a>
+            </div>
+            <div class="bottom-line">
+              <h6>The Bottom Line</h6>
+              <p>
+                TD Ameritrade makes up for higher-than-average trading commissions
+                with better-than-average service, research and trading tools that
+                will make everyone from beginner investors to active traders happy.
+              </p>
+              <a class="partner-link" href="">Read Review</a>
+            </div>
+          </div>
+        </div>
+        <div class="partners-table--item item promotion" data-options="promotion">
+          <div class="partner-media">
+            <div class="partner-logo">
+              <img src="img/partners/4.png" alt="logo" />
+            </div>
+            <div class='rating-stars'>
+              <ul class='stars'>
+                <li class='star selected' data-value='1'>
+                  <i></i>
+                </li>
+                <li class='star selected' data-value='2'>
+                  <i></i>
+                </li>
+                <li class='star selected' data-value='3'>
+                  <i></i>
+                </li>
+                <li class='star' data-value='4'>
+                  <i></i>
+                </li>
+                <li class='star' data-value='5'>
+                  <i></i>
+                </li>
+              </ul>
+            </div>
+            <div class="partner-button">
+              <a class="btn" target="_blank" rel="noopener" data-goal-name="{{ item.name }}" href="#">
+                Visit Site
+              </a>
+            </div>
+            <div class="icons">
+              <div class="icon"><img src="img/layers/clock.svg" alt="" /></div>
+              <div class="icon"><img src="img/layers/call.svg" alt="" /></div>
+              <div class="icon">
+                <img src="img/layers/letter-active.svg" alt="" />
+              </div>
+              <div class="icon"><img src="img/layers/message.svg" alt="" /></div>
+            </div>
+          </div>
+          <div class="partner-info">
+            <div class="top-line">
+              <div class="top-line--data">
+                <h6>Fees</h6>
+                <h4>$6.95</h4>
+                <span>per trade</span>
+              </div>
+              <div class="top-line--data">
+                <h6>Account Minimum</h6>
+                <h4>$0</h4>
+              </div>
+              <div class="top-line--data">
+                <h6>Promotion</h6>
+                <h4>$100-$600</h4>
+                <span>in cash bonus with a qualifying deposit</span>
+              </div>
+              <a href="" class="partner-link">Read Review</a>
+            </div>
+            <div class="bottom-line">
+              <h6>The Bottom Line</h6>
+              <p>
+                TD Ameritrade makes up for higher-than-average trading commissions
+                with better-than-average service, research and trading tools that
+                will make everyone from beginner investors to active traders happy.
+              </p>
+              <a href="" class="partner-link">Read Review</a>
+            </div>
+          </div>
+        </div>
+        <div class="partners-table--item item promotion" data-options="account-min">
+          <div class="partner-media">
+            <div class="partner-logo">
+              <img src="img/partners/5.png" alt="logo" />
+            </div>
+            <div class='rating-stars'>
+              <ul class='stars'>
+                <li class='star selected' data-value='1'>
+                  <i></i>
+                </li>
+                <li class='star selected' data-value='2'>
+                  <i></i>
+                </li>
+                <li class='star selected' data-value='3'>
+                  <i></i>
+                </li>
+                <li class='star' data-value='4'>
+                  <i></i>
+                </li>
+                <li class='star' data-value='5'>
+                  <i></i>
+                </li>
+              </ul>
+            </div>
+            <div class="partner-button">
+              <a class="btn" target="_blank" rel="noopener" data-goal-name="{{ item.name }}" href="#">
+                Visit Site
+              </a>
+            </div>
+            <div class="icons">
+              <div class="icon"><img src="img/layers/clock.svg" alt="" /></div>
+              <div class="icon"><img src="img/layers/call.svg" alt="" /></div>
+              <div class="icon">
+                <img src="img/layers/letter-active.svg" alt="" />
+              </div>
+              <div class="icon"><img src="img/layers/message.svg" alt="" /></div>
+            </div>
+          </div>
+          <div class="partner-info">
+            <div class="top-line">
+              <div class="top-line--data">
+                <h6>Fees</h6>
+                <h4>$6.95</h4>
+                <span>per trade</span>
+              </div>
+              <div class="top-line--data">
+                <h6>Account Minimum</h6>
+                <h4>$0</h4>
+              </div>
+              <div class="top-line--data">
+                <h6>Promotion</h6>
+                <h4>$100-$600</h4>
+                <span>in cash bonus with a qualifying deposit</span>
+              </div>
+              <a href="" class="partner-link">Read Review</a>
+            </div>
+            <div class="bottom-line">
+              <h6>The Bottom Line</h6>
+              <p>
+                TD Ameritrade makes up for higher-than-average trading commissions
+                with better-than-average service, research and trading tools that
+                will make everyone from beginner investors to active traders happy.
+              </p>
+              <a href="" class="partner-link">Read Review</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Index Partners Table -->
+      <!-- Index Bottom Text -->
+      <section class="index-bottom-text">
+        <h1>How to Pick the Best Online Stock Broker</h1>
+        <p>
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+          doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
+          inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+          Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
+          fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem
+          sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit
+          amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora
+          incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad
+          minima veniam, quis nostrum exercitationem ullam corporis suscipit
+          laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum
+          iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae
+          consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+        </p>
+      </section>
+      <!-- /Index Bottom Text -->
+      <!-- Index Tips -->
+      <section class="tips">
+        <h1>Tips For CHOOSING a Broker</h1>
+        <div class="tip-item">
+          <div class="tip-picture">
+            <img src="img/layers/commissions.svg" alt="Commissions" />
+          </div>
+          <div class="tip-content">
+            <h2>Trade Commissions</h2>
+            <p>
+              You are completely free to buy and sell shares, bonds and other
+              investments. This is usually cheap, which is an advantage. A
+              disadvantage is that you have to do everything yourself and have some
+              knowledge of stock exchange.
+            </p>
+          </div>
+        </div>
+        <div class="tip-item">
+          <div class="tip-picture">
+            <img src="img/layers/service.svg" alt="Service" />
+          </div>
+          <div class="tip-content">
+            <h2>Customer Service</h2>
+            <p>
+              You do not buy separate shares but you participate in funds: baskets
+              of shares within a theme. An advantage is that you invest in such a
+              spread, almost effortlessly. The extra fund management costs are a
+              disadvantage.
+            </p>
+          </div>
+        </div>
+        <div class="tip-item">
+          <div class="tip-picture">
+            <img src="img/layers/tools.svg" alt="Tools" />
+          </div>
+          <div class="tip-content">
+            <h2>Trading Tools</h2>
+            <p>
+              You let someone else do the work, but you remain responsible. The
+              investing is automated based on a profile. Usually you pay a
+              percentage of the total investment value as compensation. Letting
+              investing is accessible to everyone.
+            </p>
+          </div>
+        </div>
+        <div class="tip-item">
+          <div class="tip-picture">
+            <img src="img/layers/account.svg" alt="Account" />
+          </div>
+          <div class="tip-content">
+            <h2>Account Minimums</h2>
+            <p>
+              You leave the investing entirely to a specialist. There is a strong
+              entry threshold and the compensation is high. With real serious
+              capabilities and a fixed point of contact, we call this private
+              banking .
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- /Index Tips -->
+    </section>
+    <!-- /Index -->
+
+  </main>
+  <!-- /Main -->
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-wrapper">
+        <nav class="footer-nav">
+          <div class="sections">
+            <h3>Sections</h3>
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/">Reviews</a></li>
+              <li><a href="/">Market Updates</a></li>
+              <li><a href="/">About Us</a></li>
+            </ul>
+          </div>
+          <div class="legal">
+            <h3>Legal</h3>
+            <ul>
+              <li><a href="/">Privacy Policy</a></li>
+              <li><a href="/">Terms & Conditions</a></li>
+              <li><a href="/">Contact Us</a></li>
+            </ul>
+          </div>
+        </nav>
+        <div class="footer-brand">
+          <div class="brand">
+            <a class="nav-logo" href="/" style="text-decoration: none; color: #fff;font-family:'Kohinoor Bangla';font-size: 24px;font-weight: bold;letter-spacing: -1.09px;line-height: 35px;">
+              Stockbrokers
+              <!-- <img src="img/logo.png" alt="{{ menu.home.title|striptags }}" /> -->
+            </a>
+          </div>
+          <div class="copyright">All Rights Reserved © 2018</div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- /Footer -->
+  <!-- JavaScript Files -->
+  <script type="text/javascript" src="js/vendors.min.js"></script>
 </body>
 
 </html>
