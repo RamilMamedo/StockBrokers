@@ -5,8 +5,8 @@ $(document).ready(function () {
     type: 'GET',
     url: './js/data.json',
     success: function success(data) {
-      console.log(data);
-      console.log(data.data.today.rates);
+      // console.log(data);
+      // console.log(data.data.today.rates);
       var txt = JSON.stringify(data.data.today.rates);
       // $('.currency-ticker').text(txt)
       jQuery.each(data.results, function (i, val) {

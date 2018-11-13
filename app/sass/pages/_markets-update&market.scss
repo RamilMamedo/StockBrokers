@@ -51,7 +51,7 @@
     img {
       border-radius: $border-radius-5;
     }
-    @media (max-width: $breakpoint-md) {
+    @media (max-width: $breakpoint-sm) {
       width: 100%;
       margin: 0 0 20px;
     }
@@ -98,6 +98,7 @@
   @media (max-width: $breakpoint-lg) {
     width: 100%;
     margin-left: unset;
+    margin-top: 30px;
   }
   .aside-title {
     margin: 0;

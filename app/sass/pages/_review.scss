@@ -13,25 +13,38 @@
   }
   .partners-table--item {
     padding: 0;
-    @media (max-width: $breakpoint-lg) {
-      padding: 0;
-      flex-direction: row;
+    align-items: stretch;
+    @media (max-width: $breakpoint-md) {
+      flex-direction: column;
     }
     .partner-media {
-      max-width: 330px;
       padding: 20px 0;
       flex-direction: column;
       margin: 0 auto;
+      text-align: center;
+      @media (max-width: $breakpoint-md) {
+        // width: 100%;
+      }
+    }
+    .rating-stars {
+      margin: 20px 0;
+    }
+    .icons {
+      margin-top: 20px;
     }
     .partner-info {
       width: 420px;
-      line-height: 17px;
       margin: 0;
-      padding: 20px 40px;
+      padding: 20px 40px 0;
+      line-height: 17px;
       border-top-right-radius: 5px;
       border-bottom-right-radius: 5px;
-      background: linear-gradient(270deg, #ffffff 90%, #f3f3f3 100%);
-      @media (max-width: $breakpoint-lg) {
+      background-image: linear-gradient(270deg, #ffffff 90%, #f3f3f3 100%);
+      @media (max-width: $breakpoint-md) {
+        padding: 0;
+        width: unset;
+        text-align: center;
+        background-image: unset;
       }
       h6 {
         font-family: $default-font-bold;
@@ -47,15 +60,25 @@
           max-width: unset;
           font-size: 13px;
           line-height: 16px;
+          color: #c0bfbf;
         }
         .top-line--data {
           margin-bottom: 30px;
+          @media (max-width: $breakpoint-md) {
+            margin-bottom: 0;
+            padding: 10px 0;
+            &:nth-child(odd) {
+              background-color: #fafafa;
+            }
+            &:last-child {
+              border-bottom-right-radius: $border-radius-5;
+              border-bottom-left-radius: $border-radius-5;
+            }
+          }
         }
       }
     }
     .partner-button {
-      @media (max-width: $breakpoint-lg) {
-      }
       .btn {
         font-weight: $fw-500;
         padding: 12px 45px;
@@ -64,6 +87,9 @@
   }
   .review-text {
     margin-top: 40px;
+    @media (max-width: $breakpoint-md) {
+      padding: 0 30px;
+    }
     h3 {
       font-family: $default-font-bold;
       font-weight: normal;
@@ -72,6 +98,9 @@
       padding-bottom: 10px;
       margin-bottom: 40px;
       border-bottom: 1px solid #979797;
+      @media (max-width: $breakpoint-md) {
+        text-align: center;
+      }
     }
     ul {
       list-style: disc;
@@ -86,36 +115,64 @@
       margin-top: 30px;
       border-radius: 5px;
       box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.11);
+      @media (max-width: $breakpoint-md) {
+        width: unset;
+        margin: 0 -30px;
+      }
       thead {
         color: #fff;
         background-color: #82898d;
         th {
           text-transform: uppercase;
-          padding: 12px 0 12px 30px;
           padding: 12px 30px;
           font-family: $default-font-bold;
           font-weight: normal;
           font-size: 14px;
           line-height: 17px;
+          @media (max-width: $breakpoint-md) {
+            padding: 15px;
+          }
+          @media (max-width: $breakpoint-sm) {
+            padding: 8px;
+          }
         }
         th:first-child {
           border-top-left-radius: 5px;
         }
+        th:nth-child(2) {
+          @media (max-width: $breakpoint-md) {
+            border-top-right-radius: 5px;
+          }
+        }
         th:last-child {
           border-top-right-radius: 5px;
+          @media (max-width: $breakpoint-md) {
+            display: none;
+          }
         }
       }
       tbody {
         td {
-          padding: 30px 0 30px 30px;
           padding: 30px;
+          @media (max-width: $breakpoint-md) {
+            padding: 10px 15px;
+          }
+          @media (max-width: $breakpoint-sm) {
+            padding: 10px 8px;
+          }
         }
         tr:nth-child(odd) {
           background-color: #fff;
         }
+
         tr:last-child {
           td:first-child {
             border-bottom-left-radius: 5px;
+          }
+          td:nth-child(2) {
+            @media (max-width: $breakpoint-md) {
+              border-bottom-right-radius: 5px;
+            }
           }
           td:last-child {
             border-bottom-right-radius: 5px;
@@ -133,10 +190,23 @@
           line-height: 29px;
           text-align: center;
         }
+        .comment-text,
         .comment {
           color: #767676;
           font-size: 14px;
           line-height: 17px;
+        }
+        .comment-text {
+          margin-top: 5px;
+          display: none;
+          @media (max-width: $breakpoint-md) {
+            display: block;
+          }
+        }
+        .comment {
+          @media (max-width: $breakpoint-md) {
+            display: none;
+          }
         }
       }
     }
@@ -177,20 +247,55 @@
     .partner {
       padding: 12px;
       display: flex;
-      align-items: center;
       justify-content: space-between;
       background-color: #f8f8f8;
-      img {
-        height: 63px;
-        width: 96px;
-        background-color: $white;
-        border-radius: $border-radius-5;
+      @media (max-width: $breakpoint-lg) {
+        padding: unset;
       }
-      .btn {
-        padding: 12px 18px;
+      .partner-logo {
+        width: unset;
+        height: unset;
+        @media (max-width: $breakpoint-lg) {
+          flex-grow: 1;
+          padding: 12px 0;
+          text-align: center;
+        }
+        img {
+          height: 63px;
+          width: 96px;
+          background-color: $white;
+          border-radius: $border-radius-5;
+        }
+      }
+      .partner-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @media (max-width: $breakpoint-lg) {
+          text-align: center;
+          padding: 12px 0;
+          flex-grow: 2;
+          background-image: linear-gradient(270deg, #f8f8f8 90%, #f3f3f3 100%);
+        }
+        .btn {
+          padding: 12px 18px;
+          @media (max-width: $breakpoint-lg) {
+            padding: 12px 45px;
+          }
+        }
       }
       &:nth-child(even) {
-        background-color: #fff;
+        background-color: $white;
+        @media (max-width: $breakpoint-lg) {
+          .partner-button {
+            border-bottom-right-radius: 5px;
+            background-image: linear-gradient(
+              270deg,
+              #ffffff 90%,
+              #f3f3f3 100%
+            );
+          }
+        }
       }
       &:last-child {
         border-radius: $border-radius-5;

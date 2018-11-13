@@ -11,6 +11,10 @@ body.overflow-y-hide {
   overflow-y: hidden;
 }
 
+.js-marquee-wrapper {
+  display: flex;
+}
+
 //  Libs Helpers
 //
 //  Sticky Sidebar
@@ -67,8 +71,29 @@ body.overflow-y-hide {
   }
 }
 
-.js-marquee-wrapper {
+//  Icons
+.icons {
+  width: 100%;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  @media (max-width: $breakpoint-md) {
+    margin-bottom: 15px;
+  }
+  .icon {
+    margin: 0 7px;
+    &:first-child {
+      margin-left: 0;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+    img {
+      width: 20px;
+      height: 20px;
+      object-fit: contain;
+    }
+  }
 }
 
 .review,
@@ -76,6 +101,13 @@ body.overflow-y-hide {
 .markets-update,
 .info-pages {
   margin: 35px 0 70px;
+}
+
+.review,
+.reviews {
+  .partners-table {
+    height: unset !important;
+  }
 }
 
 .partners-table--item {

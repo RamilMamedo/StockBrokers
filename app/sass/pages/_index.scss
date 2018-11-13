@@ -18,7 +18,8 @@
     margin: 10px 0;
   }
   .filter-block {
-    display: inline-block;
+    display: flex;
+    align-items: center;
     position: relative;
     min-width: 213px;
     border-radius: $border-radius-5;
@@ -27,7 +28,6 @@
     padding-left: 10px;
     margin-right: 10px;
     @media (max-width: $breakpoint-md) {
-      display: inline-block;
       margin-right: 0;
       margin-top: 10px;
     }
@@ -41,7 +41,8 @@
       padding-right: 10px;
     }
     #filter {
-      width: 68%;
+      flex-shrink: 0;
+      flex-grow: 1;
       height: 32px;
       margin-left: 10px;
       cursor: pointer;
@@ -55,27 +56,23 @@
       -moz-appearance: none;
       -o-appearance: none;
       appearance: none;
-      @media (max-width: $breakpoint-md) {
-        width: 87%;
-      }
     }
-    svg {
-      // content: '';
+    &::after {
+      content: '';
       position: absolute;
       top: 50%;
       left: 85%;
       transform: translateY(-50%);
-      // width: 16px;
-      // height: 8px;
-      // background-image: url('../img/layers/down.svg');
-      // background-size: contain;
-      // background-repeat: no-repeat;
-      // background-position: center;
+      width: 16px;
+      height: 8px;
+      background-image: url('../img/layers/down.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
       transition: $transition;
       pointer-events: none;
-      // FIX THIS SHIT
       @media (max-width: $breakpoint-md) {
-        left: 94%;
+        left: 95%;
       }
       @media (max-width: $breakpoint-sm) {
         left: 90%;
@@ -185,29 +182,6 @@
           margin: 18px 0;
         }
       }
-      .icons {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        @media (max-width: $breakpoint-md) {
-          margin-bottom: 15px;
-        }
-        .icon {
-          margin: 0 7px;
-          &:first-child {
-            margin-left: 0;
-          }
-          &:last-child {
-            margin-right: 0;
-          }
-          img {
-            width: 20px;
-            height: 20px;
-            object-fit: contain;
-          }
-        }
-      }
     }
     .partner-info {
       margin-left: 60px;
@@ -261,7 +235,7 @@
           justify-content: unset;
           border-top-right-radius: 5px;
           border-bottom-right-radius: 5px;
-          background: linear-gradient(270deg, #ffffff 90%, #f3f3f3 100%);
+          background-image: linear-gradient(270deg, #ffffff 90%, #f3f3f3 100%);
           .top-line--data {
             margin-bottom: 20px;
           }
@@ -395,7 +369,7 @@
         padding: 20px 30px 20px;
         border-top-right-radius: 5px;
         border-bottom-right-radius: 5px;
-        background: linear-gradient(270deg, #ffffff 90%, #f3f3f3 100%);
+        background-image: linear-gradient(270deg, #ffffff 90%, #f3f3f3 100%);
       }
       @media (max-width: $breakpoint-sm) {
         min-width: 60%;
